@@ -4,41 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fall Engineering Career Fair 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;0,700;1,600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/homestyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;0,700;1,600&family=IBM+Plex+Mono:wght@400;600&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="css/homestyle.css">
     <link rel="icon" type="image/png" href="img/CF26Logo 3.png">
 </head>
+<script src="js/main.js"></script>
 <body>
-
 <!-- NAV -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
-  <a href="#" class="nav-logo" aria-label="Career Fair 2026 - Grow Your Future">
-  <img src="/img/CF26Logo.png" alt="Career Fair 2026 Logo">
-</a>
-  <div class="nav-menu" role="button" tabindex="0">
-    <a href="#students" class="nav-menu">Students</a>
-    <a href="#employers" class="nav-menu">Employers</a>
-    <a href="#maps" class="nav-menu">Maps</a>
-    <a href="#about" class="nav-menu">About</a>
-  </div>
-  <div class="nav-search">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true">
-      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-    </svg>
-<div class="search-container">
-  <input type="search" class="search-input" placeholder="Search companies, roles, majors, technologies…" aria-label="Search">
-  
-  <button class="search-icon-btn" aria-label="Submit Search">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <circle cx="11" cy="11" r="8"></circle>
-      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-    </svg>
-  </button>
-</div>  </div>
-  <div class="nav-right">
-    <button class="btn btn-yellow" aria-label="Register for the career fair">REGISTER</button>
-  </div>
-</nav>
+<div id="nav-container"></div>
 
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-heading">
@@ -126,27 +100,48 @@
   <p class="section-tag">RESOURCES</p>
   <h2 class="section-title" id="resources-heading">Prepare for Success</h2>
   <div class="res-grid">
+
+  <a href="#company-search-section" class="res-card-link">
     <article class="res-card">
-      <div class="res-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <div class="res-image">
+        <img src="/img/company_search.avif" alt="Company research" />
       </div>
-      <h3>Company Research</h3>
-      <p>Access employer profiles and job listings before the fair to plan your visits and target the right recruiters.</p>
+      <div class="res-body">
+        <h3>Company Research</h3>
+        <p>
+          Access employer profiles and job listings before the fair
+          to plan your visits and target the right recruiters.
+        </p>
+      </div>
     </article>
+  </a>
+
+  <a href="https://www.umcareerfair.org/career-fair-plus" class="res-card-link">
     <article class="res-card">
-      <div class="res-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+      <div class="res-image">
+        <img src="/img/fair_plus.png" alt="Career Fair Plus App" />
       </div>
-      <h3>Career Fair Plus App</h3>
-      <p>Download the app to browse companies, navigate the floor, and track your conversations in real time.</p>
+
+      <div class="res-body">
+        <h3>Career Fair Plus App</h3>
+        <p>
+          Download the app to explore employers, navigate the career fair floor,
+          and keep track of conversations throughout the event.
+        </p>
+      </div>
     </article>
+  </a>
+
     <article class="res-card">
-      <div class="res-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="res-image">
+        <img src="/img/receptions.avif" alt="Receptions" />
       </div>
-      <h3>Receptions</h3>
-      <p>Attend pre-fair receptions Sep 13–14 to network with recruiters in a relaxed, informal setting.</p>
+      <div class="res-body">
+        <h3>Receptions</h3>
+        <p>Attend pre-fair receptions Sep 13–14 to network with recruiters in a relaxed, informal setting.</p>
+      </div>
     </article>
+
   </div>
 </section>
 
@@ -154,60 +149,75 @@
 <section class="section timeline-section" aria-labelledby="timeline-heading">
   <p class="section-tag">SCHEDULE</p>
   <h2 class="section-title" id="timeline-heading">Event Timeline</h2>
-  <div class="tl-wrap" role="list" aria-label="Event timeline">
-    <div class="tl-line" aria-hidden="true">
-      <div class="tl-dot"></div>
-      <div class="tl-line-inner"></div>
-    </div>
-    <div class="tl-col tl-col-left">
-      <article class="tl-item" role="listitem">
-        <div class="tl-date">August 1st</div>
-        <div class="tl-event">Preliminary Company List Released</div>
-      </article>
-      <article class="tl-item" role="listitem">
-        <div class="tl-date">August 25th</div>
-        <div class="tl-event">Finalized Company List Released</div>
-      </article>
-      <article class="tl-item" role="listitem">
-        <div class="tl-date">September 14th</div>
-        <div class="tl-event">Receptions — Day 2 Companies</div>
-      </article>
-      <div></div>
-    </div>
-    <div class="tl-col tl-col-right">
-      <article class="tl-item" role="listitem">
+
+  <div class="timeline">
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
         <div class="tl-date">May 20th</div>
         <div class="tl-event">Company Registration Opens</div>
-      </article>
-      <article class="tl-item" role="listitem">
-        <div class="tl-date">August 21st</div>
-        <div class="tl-date-note">when capacity is reached</div>
-        <div class="tl-event">Company Registration Closes</div>
-      </article>
-      <article class="tl-item" role="listitem">
-        <div class="tl-date">September 13th</div>
-        <div class="tl-event">Receptions — Day 1 Companies</div>
-      </article>
-      <article class="tl-item featured" role="listitem">
-        <div class="tl-date featured">September 15–16th</div>
-        <div class="tl-event">Career Fair Days 1 &amp; 2</div>
-      </article>
+      </div>
     </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <div class="tl-date">August 1st</div>
+        <div class="tl-event">Preliminary Company List Released</div>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <div class="tl-date">August 21st</div>
+        <div class="tl-date-note">or when capacity is reached</div>
+        <div class="tl-event">Company Registration Closes</div>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <div class="tl-date">August 25th</div>
+        <div class="tl-event">Final Company List Published</div>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <div class="tl-date">September 13th</div>
+        <div class="tl-event">Reception Night — Day 1 Employers</div>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <div class="tl-date">September 14th</div>
+        <div class="tl-event">Reception Night — Day 2 Employers</div>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <div class="tl-date">September 15–16th</div>
+        <div class="tl-event">Fall Engineering Career Fair — Days 1 &amp; 2</div>
+      </div>
+    </div>
+
   </div>
 </section>
-<section class="section attendees" aria-labelledby="attendees-heading" style="background: #FAF8F6; color: #04192A; padding: 72px 40px; text-align: center;">
+
+<!-- ATTENDEES -->
+<section class="section attendees" id="company-search-section" aria-labelledby="attendees-heading" style="background: #FAF8F6; color: #04192A; padding: 72px 40px; text-align: center;">
   <p class="section-tag" style="font-size: 11px; font-weight: 600; letter-spacing: .13em; color: rgba(4, 25, 42, 0.5); margin-bottom: 10px;">ATTENDEES</p>
   
-  <div class="companies-header" style="text-align: center; margin-bottom: 40px;">
-    <h2 class="section-title" id="attendees-heading" style="color: #04192A; margin-bottom: 12px; font-family: 'Crimson Text', serif; font-size: clamp(36px, 4vw, 56px); font-weight: 600; line-height: 1.1;">Companies in Attendance</h2>
-    <p style="color: rgba(4, 25, 42, 0.7); max-width: 650px; margin: 0 auto; font-size: 14px; line-height: 1.85;">
+  <div class="companies-header">
+    <h2 class="section-title" id="attendees-heading">Companies in Attendance</h2>
+    <p style="color: rgba(4, 25, 42, 0.7); max-width: 650px; margin: 0 auto; font-size: 14px; line-height: 1.85; margin-bottom: 20px;" >
       Explore the industry-leading companies attending this year's Fall Engineering Career Fair. 
       Filter by keywords, presentation sessions, and available employment pathways.
     </p>
   </div>
 
   <div class="nav-right" style="display: flex; align-items: center; justify-content: center; margin-bottom: 40px; flex-wrap: wrap; gap: 16px;">
-    
     <div class="search-container" style="display: flex; align-items: center; position: relative;">
       <input type="text" class="search-input" placeholder="Search companies..." id="company-search">
       <button class="search-icon-btn" aria-label="Submit search">
@@ -236,42 +246,18 @@
         <option value="full-time" style="background: #ffffff; color: #04192A;">Full-Time</option>
       </select>
     </div>
-
   </div>
 
-  <p class="stat-label" style="text-align: center; margin-bottom: 32px; text-transform: uppercase; letter-spacing: 0.05em; font-size: 12px; color: rgba(4, 25, 42, 0.6); font-weight: 600;">
-    Showing 28 of 28 companies
-  </p>
+<p
+  id="company-count"
+  class="stat-label"
+  style="text-align: center; margin-bottom: 32px; text-transform: uppercase; letter-spacing: 0.05em; font-size: 12px; color: rgba(4, 25, 42, 0.6); font-weight: 600;"
+>
+  Showing 3 of 3 companies
+</p>
 
-  <div class="res-grid" id="companies-grid" style="margin-bottom: 24px; text-align: left;">
-    
-    <article class="res-card" style="background: #ffffff; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
-      <div class="res-icon" style="background: #ffffff;">
-        <img src="logos/General_Electric_logo.svg" alt="General Electric">
-      </div>
-      <h3 style="color: #04192A;">General Electric</h3>
-      <p style="font-size: 11px; color: #a07800; font-weight: 600; letter-spacing: 0.05em; margin: 4px 0 8px;">SUNDAY AFTERNOON • CO-OP</p>
-      <p style="color: rgba(0, 0, 0, 0.6); font-size: 13px; margin: 0; line-height: 1.65;">Seeking structural analysis profiles, aviation engine diagnostics system specialists, and electrical engineering tracks.</p>
-    </article>
-
-    <article class="res-card" style="background: #ffffff; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
-      <div class="res-icon" style="background: #ffffff;">
-        <img src="logos/Apple_logo_black.svg" alt="Apple">
-      </div>
-      <h3 style="color: #04192A;">Apple</h3>
-      <p style="font-size: 11px; color: #a07800; font-weight: 600; letter-spacing: 0.05em; margin: 4px 0 8px;">MONDAY MORNING • INTERNSHIP</p>
-      <p style="color: rgba(0, 0, 0, 0.6); font-size: 13px; margin: 0; line-height: 1.65;">Recruiting display systems processing engineers, software stack automation specialists, and firmware designers.</p>
-    </article>
-
-    <article class="res-card" style="background: #ffffff; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
-      <div class="res-icon" style="background: #ffffff;">
-        <img src="logos/LMT-db3de619.png" alt="Lockheed Martin">
-      </div>
-      <h3 style="color: #04192A;">Lockheed Martin</h3>
-      <p style="font-size: 11px; color: #a07800; font-weight: 600; letter-spacing: 0.05em; margin: 4px 0 8px;">SUNDAY MORNING • FULL-TIME</p>
-      <p style="color: rgba(0, 0, 0, 0.6); font-size: 13px; margin: 0; line-height: 1.65;">Hiring defense infrastructure specialists, autonomy pathfinding engineers, and embedded micro-controller designers.</p>
-    </article>
-
+  <div class="company-grid" id="companies-grid" style="margin-bottom: 24px; text-align: left;">
+    <!-- Company cards will be dynamically inserted here -->
   </div>
 
   <div id="sticky-btn-wrapper" style="position: static; bottom: 24px; z-index: 100; padding: 12px 0; transition: all 0.3s ease;">
@@ -283,135 +269,8 @@
   <div class="thankyou" role="note" style="background: transparent; color: rgba(4, 25, 42, 0.5); font-weight: 600; font-size: 15px; padding: 32px 40px;">
     Thank You for attending!
   </div>
-
-  <script>
-    const extraCompanies = [
-      {
-        name: "Microsoft",
-        time: "SUNDAY MORNING",
-        type: "INTERNSHIP & FULL-TIME",
-        desc: "Looking for cloud infrastructure developers, data engineers, and technical program managers.",
-        iconSvg: '<circle cx="12" cy="12" r="10"></circle><path d="M8 12h8M12 8v8"></path>'
-      },
-      {
-        name: "Boeing",
-        time: "MONDAY AFTERNOON",
-        type: "CO-OP",
-        desc: "Recruiting aerospace structural testers, quality analysts, and embedded systems programmers.",
-        iconSvg: '<polygon points="12 2 2 22 12 17 22 22 12 2"></polygon>'
-      },
-      {
-        name: "Google",
-        time: "MONDAY MORNING",
-        type: "INTERNSHIP",
-        desc: "Seeking software engineering tracks, site reliability minds, and product design candidates.",
-        iconSvg: '<path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12s4.48 10 10 10c5.52 0 10-4.48 10-10z"></path>'
-      }
-    ];
-
-    const loadMoreBtn = document.getElementById('load-more-btn');
-    const stickyWrapper = document.getElementById('sticky-btn-wrapper');
-    const companiesGrid = document.getElementById('companies-grid');
-    
-    let isExpanded = false;
-
-    if (loadMoreBtn && companiesGrid && stickyWrapper) {
-      loadMoreBtn.addEventListener('click', function() {
-        if (!isExpanded) {
-          // --- EXPAND GRID ACTION ---
-          extraCompanies.forEach(company => {
-            const cardHTML = `
-              <article class="res-card extra-company-card" style="background: #ffffff; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
-                <div class="res-icon" style="background: #F0EBE3; display: flex; align-items: center; justify-content: center;">
-                  <svg viewBox="0 0 24 24" style="stroke: #04192A; fill: none; stroke-width: 2; width: 24px; height: 24px;">
-                    ${company.iconSvg}
-                  </svg>
-                </div>
-                <h3 style="color: #04192A;">${company.name}</h3>
-                <p style="font-size: 11px; color: #a07800; font-weight: 600; letter-spacing: 0.05em; margin: 4px 0 8px;">
-                  ${company.time} • ${company.type}
-                </p>
-                <p style="color: rgba(0, 0, 0, 0.6); font-size: 13px; margin: 0; line-height: 1.65;">
-                  ${company.desc}
-                </p>
-              </article>
-            `;
-            companiesGrid.insertAdjacentHTML('beforeend', cardHTML);
-          });
-
-          // Turn on sticky behavior, add a subtle pop shadow & change text
-          stickyWrapper.style.position = "sticky";
-          loadMoreBtn.style.boxShadow = "0 8px 24px rgba(4, 25, 42, 0.15)";
-          loadMoreBtn.innerText = "Show Less";
-          isExpanded = true;
-        } else {
-          // --- SHRINK GRID ACTION ---
-          const targetCards = companiesGrid.querySelectorAll('.extra-company-card');
-          targetCards.forEach(card => card.remove());
-
-          // Revert back to standard flow positioning
-          stickyWrapper.style.position = "static";
-          loadMoreBtn.style.boxShadow = "none";
-          
-          // Cleanly roll scroll view up to section header
-          companiesGrid.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-          loadMoreBtn.innerText = "Load More Companies";
-          isExpanded = false;
-        }
-      });
-    }
-  </script>
 </section>
-
-
 <!-- FOOTER -->
-<footer role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="#" class="nav-logo" aria-label="Career Fair 2026 - Grow Your Future">
-      <img src="/img/CF26Logo.png" alt="Career Fair 2026 Logo">
-      </a>
-      <div class="footer-contact">
-        <a href="https://www.sweumich.org/" target="_blank" rel="noopener">sweumich.org</a>
-        <a href="mailto:swe.eboard@umich.edu">swe.eboard@umich.edu</a>
-      </div>
-    </div>
-    <div>
-      <div class="footer-col-head">Students</div>
-      <nav class="footer-links" aria-label="Student links">
-        <a href="#">Career Fair Plus App</a>
-        <a href="#">Student Guide</a>
-        <a href="#">Company List</a>
-        <a href="#">Receptions</a>
-        <a href="#">EGL Coat Check</a>
-        <a href="#">Volunteer</a>
-        <a href="#">Student FAQ</a>
-      </nav>
-    </div>
-    <div>
-      <div class="footer-col-head">Employers</div>
-      <nav class="footer-links" aria-label="Employer links">
-        <a href="#">Register as Employer</a>
-        <a href="#">Employer Guide</a>
-        <a href="#">Booth Information</a>
-        <a href="#">Receptions</a>
-      </nav>
-    </div>
-    <div>
-      <div class="footer-col-head">About</div>
-      <nav class="footer-links" aria-label="About links">
-        <a href="#">About Us</a>
-        <a href="#">Leadership</a>
-        <a href="#">Maps</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Society of Women Engineers &amp; Tau Beta Pi — University of Michigan</span>
-    <span>Fall Engineering Career Fair</span>
-  </div>
-</footer>
+<div id="footer-container"></div>
 </body>
 </html>
