@@ -1,0 +1,638 @@
+/* about-us.css
+   Page-specific styles for about-us.html
+   Shared base styles live in homestyle.css.
+*/
+
+/* ── HERO ── */
+.about-hero {
+  background-image: url('https://static.wixstatic.com/media/bab3e1_73f16c8aa8204b7aae103214f4009b0f~mv2.jpg/v1/fill/w_1920,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/53184174137_2efc8380c8_k.jpg') !important;
+  background-size: cover !important;
+  background-position: center 30% !important;
+  min-height: 540px !important;
+  padding: 80px 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.about-hero .hero-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  grid-template-columns: unset !important;
+  max-width: 700px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero .hero-title {
+  font-size: clamp(48px, 7vw, 84px) !important;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-hero .hero-sub {
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 580px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* ── STATS STRIP ── */
+.about-stats-strip {
+  background: #FFC800;
+  padding: 32px 40px;
+}
+
+.about-stats-inner {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-stat {
+  flex: 1;
+  text-align: center;
+  padding: 0 32px;
+  border-right: 1px solid rgba(4, 25, 42, 0.15);
+}
+
+.about-stat:last-child {
+  border-right: none;
+}
+
+.about-stat-num {
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(40px, 5vw, 60px);
+  font-weight: 700;
+  color: #04192A;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.about-stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(4, 25, 42, 0.6);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── ABOUT THE FAIR ── */
+.about-fair-section {
+  background: #061929;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-fair-text {
+  padding: 80px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-fair-text .section-tag {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  margin-bottom: 12px;
+}
+
+.about-fair-text .section-title {
+  color: #fff;
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 24px;
+}
+
+.about-fair-text p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #848C93;
+  margin-bottom: 18px;
+}
+
+.about-fair-text p:last-of-type {
+  margin-bottom: 0;
+}
+
+.about-fair-img {
+  position: relative;
+  overflow: hidden;
+  min-height: 440px;
+}
+
+.about-fair-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── ORG SECTIONS (SWE + TBP) ── */
+.about-org-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 480px;
+}
+
+.about-org-section.light {
+  background: #FAF8F6;
+  color: #04192A;
+}
+
+.about-org-section.dark {
+  background: #061929;
+  color: #fff;
+  direction: rtl;
+}
+
+.about-org-section.dark > * {
+  direction: ltr;
+}
+
+.org-img {
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.org-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.org-text {
+  padding: 72px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.org-tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(4, 25, 42, 0.4);
+  margin-bottom: 0;
+}
+
+.about-org-section.dark .org-tag {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.org-title {
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 600;
+  color: #04192A;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.about-org-section.dark .org-title {
+  color: #fff;
+}
+
+.org-desc {
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(4, 25, 42, 0.62);
+  margin: 0;
+}
+
+.about-org-section.dark .org-desc {
+  color: #848C93;
+}
+
+.org-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #04192A;
+  border-bottom: 2px solid #FFC800;
+  text-decoration: none;
+  padding-bottom: 2px;
+  width: fit-content;
+  transition: opacity 0.2s;
+}
+
+.about-org-section.dark .org-link {
+  color: #FFC800;
+  border-bottom-color: rgba(255, 200, 0, 0.35);
+}
+
+.org-link:hover {
+  opacity: 0.7;
+}
+
+/* ── CONNECT CTA ── */
+.about-connect-section {
+  background: #FAF8F6;
+  color: #04192A;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.about-connect-section .section-tag {
+  color: rgba(4, 25, 42, 0.45);
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.about-connect-section .section-title {
+  color: #04192A;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.about-connect-section .section-sub {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(4, 25, 42, 0.55);
+  max-width: 580px;
+  margin: 0 auto 48px;
+}
+
+.connect-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.connect-card {
+  background: #fff;
+  border: 1px solid rgba(4, 25, 42, 0.08);
+  border-radius: 20px;
+  padding: 36px 32px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.connect-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(4, 25, 42, 0.08);
+}
+
+.connect-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #FFC800;
+}
+
+.connect-card-logo {
+  width: 40px;
+  height: 40px;
+  background: #04192A;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Crimson Text', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFC800;
+  letter-spacing: -0.02em;
+}
+
+.connect-card h3 {
+  font-family: 'Crimson Text', serif;
+  font-size: 22px;
+  color: #04192A;
+}
+
+.connect-card p {
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(4, 25, 42, 0.55);
+  margin-bottom: 20px;
+}
+
+.connect-card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.connect-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #04192A;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.connect-card-link:hover {
+  color: #a07800;
+}
+
+.connect-card-link svg {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
+
+/* ── LEADERSHIP ── */
+.about-leadership-section {
+  background: #FAF8F6;
+  color: #04192A;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.about-leadership-section .section-tag {
+  color: rgba(4, 25, 42, 0.45);
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.about-leadership-section .section-title {
+  color: #04192A;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.about-leadership-section .section-sub {
+  font-size: 14px;
+  color: rgba(4, 25, 42, 0.5);
+  margin-bottom: 48px;
+}
+
+.leadership-subtitle {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(4, 25, 42, 0.4);
+  margin-bottom: 28px;
+}
+
+.director-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.director-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.director-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #FFC800;
+  flex-shrink: 0;
+}
+
+.director-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.director-name {
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #04192A;
+  line-height: 1.2;
+}
+
+.director-role {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(4, 25, 42, 0.4);
+}
+
+.director-linkedin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: rgba(4, 25, 42, 0.4);
+  transition: color 0.2s;
+}
+
+.director-linkedin:hover {
+  color: #0A66C2;
+}
+
+.director-linkedin svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* Committees */
+.committees-wrap {
+  max-width: 960px;
+  margin: 64px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.committee-section {
+  text-align: left;
+}
+
+.committee-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(4, 25, 42, 0.4);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #FFC800;
+}
+
+.member-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 84px;
+}
+
+.member-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(4, 25, 42, 0.08);
+  flex-shrink: 0;
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.member-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #04192A;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.member-linkedin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(4, 25, 42, 0.3);
+  transition: color 0.2s;
+}
+
+.member-linkedin:hover {
+  color: #0A66C2;
+}
+
+.member-linkedin svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .about-fair-section,
+  .about-org-section,
+  .about-org-section.dark {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .about-org-section.dark > * {
+    direction: ltr;
+  }
+
+  .about-fair-text,
+  .org-text {
+    padding: 48px 24px;
+  }
+
+  .about-fair-img,
+  .org-img {
+    min-height: 280px;
+    max-height: 340px;
+  }
+
+  .about-stats-inner {
+    gap: 0;
+  }
+
+  .about-stat {
+    padding: 0 16px;
+  }
+
+  .connect-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-connect-section {
+    padding: 60px 20px;
+  }
+
+  .director-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .about-leadership-section {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    padding: 60px 20px !important;
+  }
+
+  .about-stats-strip {
+    padding: 24px 20px;
+  }
+
+  .about-stats-inner {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .about-stat {
+    flex: 0 0 calc(50% - 12px);
+    border-right: none;
+    padding: 0;
+  }
+
+  .director-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .member-grid {
+    gap: 16px;
+  }
+
+  .member-card {
+    width: 72px;
+  }
+
+  .member-photo {
+    width: 60px;
+    height: 60px;
+  }
+}

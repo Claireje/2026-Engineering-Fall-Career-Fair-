@@ -33,12 +33,12 @@ img {
     z-index: 100;
     background: #061929;
     border-bottom: 1px solid rgba(255,255,255,.08);
-    height: 80px;
-    display: flex; 
-    align-items: center; 
+    height: 64px;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 0 40px; 
-    gap: 24px;
+    padding: 0 32px;
+    gap: 20px;
 }
 
 .nav-logo {
@@ -73,8 +73,8 @@ img {
 }
 
 .nav-link {
-  font-size: 13px;
-  padding: 15px;
+  font-size: 14px;
+  padding: 10px 12px;
   color: rgba(255,255,255,.7);
   cursor: pointer;
 }
@@ -178,9 +178,9 @@ img {
     flex-shrink: 0; 
 }
 
-.nav-menu { 
-    font-size: 13px; 
-    padding: 15px;
+.nav-menu {
+    font-size: 14px;
+    padding: 10px 12px;
     color: rgba(255,255,255,.7); 
     cursor: pointer; 
 }
@@ -907,15 +907,15 @@ img {
 /* ── FOOTER ── */
 footer {
     background: #000;
-    padding: 56px 40px 32px;
+    padding: 36px 40px 24px;
     color: #fff;
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: 260px 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 48px;
+    gap: 28px;
+    margin-bottom: 28px;
 }
 
 .footer-brand-logo {
@@ -987,7 +987,7 @@ html {
 
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,.08);
-    padding-top: 24px;
+    padding-top: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;

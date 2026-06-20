@@ -1,0 +1,419 @@
+/* career-fair-plus.css
+   Page-specific styles for career-fair-plus.html
+   Shared base styles live in homestyle.css.
+*/
+
+/* ── HERO ── */
+.cfplus-hero {
+  background-image: url('../img/homepage_image.png') !important;
+  background-size: cover !important;
+  background-position: center top !important;
+  min-height: 500px !important;
+  padding: 80px 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.cfplus-hero .hero-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  grid-template-columns: unset !important;
+  max-width: 680px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.cfplus-hero .hero-title {
+  font-size: clamp(44px, 6vw, 72px) !important;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cfplus-hero .hero-sub {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 560px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.cfplus-hero .hero-pills {
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.cfplus-hero .hero-btns {
+  justify-content: center;
+}
+
+/* ── DOWNLOAD BUTTONS ── */
+.store-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: #04192A;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.store-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.store-btn svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  fill: #04192A;
+}
+
+.store-btn-sub {
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(4,25,42,0.5);
+  display: block;
+  margin-bottom: 1px;
+  letter-spacing: 0.04em;
+}
+
+.store-btn-label {
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  line-height: 1.2;
+}
+
+/* ── STEPS SECTION ── */
+.cfplus-steps-section {
+  background: #FAF8F6;
+  color: #04192A;
+  padding: 88px 40px;
+}
+
+.cfplus-steps-section .section-tag {
+  text-align: center;
+  color: rgba(4, 25, 42, 0.5);
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.cfplus-steps-section .section-title {
+  text-align: center;
+  color: #04192A;
+  font-size: 36px;
+  margin-bottom: 64px;
+}
+
+/* ── INDIVIDUAL STEP ── */
+.cfplus-step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1060px;
+  margin: 0 auto 80px;
+}
+
+.cfplus-step:last-child {
+  margin-bottom: 0;
+}
+
+.cfplus-step.reverse {
+  direction: rtl;
+}
+
+.cfplus-step.reverse > * {
+  direction: ltr;
+}
+
+.step-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #FFC800;
+  color: #04192A;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 12px;
+  flex-shrink: 0;
+  font-family: 'Crimson Text', serif;
+}
+
+.step-heading {
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 600;
+  color: #04192A;
+  line-height: 1.2;
+}
+
+.step-desc {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(4, 25, 42, 0.62);
+}
+
+.step-store-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.step-store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #04192A;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.step-store-btn:hover {
+  background: #0a2a40;
+}
+
+.step-store-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+  flex-shrink: 0;
+}
+
+/* ── SCREENSHOT ── */
+.step-screenshot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-screenshot img {
+  max-width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(4, 25, 42, 0.12);
+  border: 1px solid rgba(4, 25, 42, 0.07);
+}
+
+/* app icon style for step 1 */
+.step-app-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid rgba(4, 25, 42, 0.08);
+  border-radius: 24px;
+  padding: 48px 40px;
+  box-shadow: 0 8px 32px rgba(4, 25, 42, 0.08);
+}
+
+.step-app-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.step-app-name {
+  font-family: 'Crimson Text', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #04192A;
+  text-align: center;
+}
+
+.step-app-sub {
+  font-size: 12px;
+  color: rgba(4,25,42,0.45);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ── STEP DIVIDER ── */
+.step-divider {
+  max-width: 1060px;
+  margin: 0 auto 80px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: rgba(4,25,42,0.15);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.step-divider::before,
+.step-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(4,25,42,0.1);
+}
+
+/* ── CTA SECTION ── */
+.cfplus-cta-section {
+  background: #061929;
+  color: #fff;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.cfplus-cta-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 56px 48px;
+}
+
+.cfplus-cta-card .section-tag {
+  color: #FFC800;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.cfplus-cta-card h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 16px;
+}
+
+.cfplus-cta-card p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #848C93;
+  max-width: 520px;
+  margin: 0 auto 36px;
+}
+
+.cfplus-cta-store-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cfplus-cta-store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: #04192A;
+  border-radius: 12px;
+  padding: 13px 22px;
+  font-family: 'IBM Plex Mono', monospace;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.cfplus-cta-store-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.cfplus-cta-store-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: #04192A;
+  flex-shrink: 0;
+}
+
+.cfplus-cta-store-btn-sub {
+  font-size: 10px;
+  color: rgba(4,25,42,0.5);
+  display: block;
+  letter-spacing: 0.04em;
+}
+
+.cfplus-cta-store-btn-label {
+  font-size: 15px;
+  font-weight: 700;
+  display: block;
+  line-height: 1.2;
+  color: #04192A;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .cfplus-step,
+  .cfplus-step.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 32px;
+    margin-bottom: 56px;
+  }
+
+  .cfplus-step.reverse > * {
+    direction: ltr;
+  }
+
+  .step-divider {
+    margin-bottom: 56px;
+  }
+
+  .cfplus-steps-section {
+    padding: 60px 20px;
+  }
+
+  .cfplus-cta-section {
+    padding: 60px 20px;
+  }
+
+  .cfplus-cta-card {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cfplus-hero {
+    padding: 60px 20px !important;
+  }
+
+  .cfplus-steps-section .section-title {
+    margin-bottom: 40px;
+  }
+}

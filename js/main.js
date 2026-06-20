@@ -195,6 +195,54 @@ document.addEventListener("DOMContentLoaded", () => {
   loadHTML("footer-container", "footer.html");
   loadCompanies();
   highlightCurrentTimelineItem();
+
+  // ── MAPS LIGHTBOX ──
+  const thumbs   = Array.from(document.querySelectorAll(".map-thumb"));
+  const lightbox = document.getElementById("lightbox");
+  const lbImg    = document.getElementById("lightbox-img");
+  const lbLabel  = document.getElementById("lightbox-label");
+  const lbClose  = document.getElementById("lightbox-close");
+  const lbPrev   = document.getElementById("lightbox-prev");
+  const lbNext   = document.getElementById("lightbox-next");
+
+  if (lightbox && thumbs.length) {
+    let current = 0;
+
+    function openLightbox(index) {
+      current = index;
+      const thumb = thumbs[current];
+      lbImg.src = thumb.dataset.src;
+      lbLabel.textContent = thumb.dataset.label;
+      lightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+      lbClose.focus();
+      updateNavBtns();
+    }
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      document.body.style.overflow = "";
+      thumbs[current].focus();
+    }
+
+    function updateNavBtns() {
+      lbPrev.disabled = current === 0;
+      lbNext.disabled = current === thumbs.length - 1;
+    }
+
+    thumbs.forEach((thumb, i) => thumb.addEventListener("click", () => openLightbox(i)));
+    lbClose.addEventListener("click", closeLightbox);
+    lbPrev.addEventListener("click", () => { if (current > 0) openLightbox(current - 1); });
+    lbNext.addEventListener("click", () => { if (current < thumbs.length - 1) openLightbox(current + 1); });
+    lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+
+    document.addEventListener("keydown", (e) => {
+      if (lightbox.hidden) return;
+      if (e.key === "Escape")     closeLightbox();
+      if (e.key === "ArrowLeft")  { if (current > 0) openLightbox(current - 1); }
+      if (e.key === "ArrowRight") { if (current < thumbs.length - 1) openLightbox(current + 1); }
+    });
+  }
 });
 
 async function loadHTML(containerId, filePath) {
