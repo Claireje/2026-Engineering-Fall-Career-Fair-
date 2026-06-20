@@ -1,53 +1,32 @@
-# Fall Engineering Career Fair 2026 — Website
+# Fall Engineering Career Fair 2026
 
-This is the website for UMich's Fall Engineering Career Fair (Sep 15–16, 2026), hosted by SWE and TBP. We rebuilt it from scratch after migrating off Wix.
+Website for the UMich Fall Engineering Career Fair (Sep 15–16, 2026). We migrated off Wix and rebuilt everything from scratch.
 
-## Getting started
+## Running it
 
-There's no build step or anything to install. Just open the files in a browser — but use a local server or the nav and footer won't load (they're fetched as separate HTML files at runtime).
+No install needed. The only gotcha is that the nav and footer are loaded via `fetch()`, so if you just double-click an HTML file it won't work. Run a local server instead:
 
 ```bash
-# easiest way
 python3 -m http.server 8000
 ```
 
-Then go to `http://localhost:8000/homepage.html`.
+Then open `http://localhost:8000/homepage.html`.
 
-## How the site is structured
+## Structure
 
-Each page is its own HTML file with a page-specific CSS file in `/css`. The nav and footer live in `nav.html` and `footer.html` and get injected into every page via `js/main.js` — so if you need to update a nav link or add something to the footer, you only have to do it in one place.
+Pretty straightforward — each page is its own HTML file with a matching CSS file in `/css`. The nav and footer are in `nav.html` / `footer.html` and get injected into every page by `main.js`, so you only need to edit them in one place.
 
-The company listings on the homepage pull from a Google Sheet (published as CSV). The URL is at the top of `main.js`. To update the company list, just edit the spreadsheet — no code changes needed.
+The company list on the homepage comes from a Google Sheet (published as CSV). The link is at the top of `main.js`. You can update companies just by editing the spreadsheet, no code needed.
 
-## Pages
+## Making changes
 
-- `homepage.html` — hero, company search + filter, event timeline
-- `about-us.html` — about the fair, SWE/TBP info, directors + committee
-- `student-guide.html` — student prep guide with PDF download
-- `volunteer.html` — volunteering info and sign-up
-- `career-fair-plus.html` — Career Fair Plus app
-- `egl-coat-check.html` — EGL coat check
-- `employer-faq.html` — FAQ for employers
-- `receptions.html` — employer receptions
-- `maps_fall engineering career fair.html` — floor maps
+- **Nav or footer** → `nav.html` / `footer.html`
+- **Company list** → the Google Sheet
+- **Event dates** → update the hero in `homepage.html` and the date objects in `main.js` (`highlightCurrentTimelineItem`)
+- **Directors / committee** → `about-us.html`
+- **Volunteer shifts** → `volunteer.html`
+- **Global styles** → `css/homestyle.css`
 
-## Design
+## Deploying
 
-Colors: `#061929` (navy), `#FFC800` (yellow), `#FAF8F6` (off-white), `#04192A` (dark text)
-
-Fonts: Crimson Text for headings, IBM Plex Mono for everything else. Both loaded from Google Fonts.
-
-All the shared/global styles are in `css/homestyle.css`. Page-specific stuff goes in that page's own CSS file.
-
-## Updating things
-
-- **Company list** → edit the Google Sheet
-- **Event dates or stats** → `homepage.html` hero + timeline sections, and the date objects in `highlightCurrentTimelineItem()` in `main.js`
-- **Nav links** → `nav.html`
-- **Footer** → `footer.html`
-- **Directors or committee members** → `about-us.html` leadership section
-- **Volunteer time slots** → `volunteer.html`
-
-## Deployment
-
-Push to `main` and it goes live. It's just static files so there's nothing to build.
+Just push to `main`. It's all static files so there's nothing to build.
