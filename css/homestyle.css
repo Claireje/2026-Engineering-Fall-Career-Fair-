@@ -702,7 +702,8 @@ img {
     grid-template-columns: 1fr;
     gap: 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 24px;
+    text-align: left;
 }
 
 .company-card {
@@ -873,6 +874,8 @@ img {
     text-align: center;
     width: 100%;
     background: #FAF8F6;
+    color: #04192A;
+    padding: 72px 40px;
 }
 
 .attendees .section-title {
@@ -880,6 +883,93 @@ img {
     text-align: center;
     width: 100%;
     color: #04192A;
+}
+
+.attendees .section-tag {
+    color: rgba(4, 25, 42, 0.5);
+}
+
+.companies-header p {
+    color: rgba(4, 25, 42, 0.7);
+    max-width: 650px;
+    margin: 0 auto 20px;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* company search controls row */
+.attendees .nav-right {
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* filter select wrappers */
+#time-filter-wrap {
+    max-width: 180px;
+    flex: 1;
+    position: relative;
+}
+
+#job-type-filter-wrap {
+    max-width: 200px;
+    flex: 1;
+    position: relative;
+}
+
+/* filter selects */
+#time-filter,
+#job-type-filter {
+    width: 100%;
+    background: rgba(4, 25, 42, 0.05);
+    border: 1px solid rgba(4, 25, 42, 0.15);
+    border-radius: 30px;
+    padding: 10px 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: #04192A;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+}
+
+#time-filter option,
+#job-type-filter option {
+    background: #ffffff;
+    color: #04192A;
+}
+
+#time-filter option:first-child,
+#job-type-filter option:first-child {
+    background: #FAF8F6;
+}
+
+/* company count label */
+#company-count {
+    text-align: center;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    color: rgba(4, 25, 42, 0.6);
+    font-weight: 600;
+}
+
+/* load more button wrapper */
+#sticky-btn-wrapper {
+    position: static;
+    z-index: 100;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+/* load more button — light-bg variant of .btn-ghost */
+#load-more-btn {
+    color: #04192A;
+    background: #FAF8F6;
+    border: 2px solid rgba(4, 25, 42, 0.35);
+    min-width: 200px;
+    box-shadow: none;
+    transition: all 0.2s ease;
 }
 
 .attendees-logos {
@@ -898,10 +988,10 @@ img {
 .thankyou {
     text-align: center;
     padding: 32px 40px;
-    background: #FAF8F6;
+    background: transparent;
     font-size: 15px;
     font-weight: 600;
-    color: #04192A;
+    color: rgba(4, 25, 42, 0.5);
 }
 
 /* ── FOOTER ── */

@@ -206,19 +206,19 @@
 </section>
 
 <!-- ATTENDEES -->
-<section class="section attendees" id="company-search-section" aria-labelledby="attendees-heading" style="background: #FAF8F6; color: #04192A; padding: 72px 40px; text-align: center;">
-  <p class="section-tag" style="font-size: 11px; font-weight: 600; letter-spacing: .13em; color: rgba(4, 25, 42, 0.5); margin-bottom: 10px;">ATTENDEES</p>
-  
+<section class="section attendees" id="company-search-section" aria-labelledby="attendees-heading">
+  <p class="section-tag">ATTENDEES</p>
+
   <div class="companies-header">
     <h2 class="section-title" id="attendees-heading">Companies in Attendance</h2>
-    <p style="color: rgba(4, 25, 42, 0.7); max-width: 650px; margin: 0 auto; font-size: 14px; line-height: 1.85; margin-bottom: 20px;" >
-      Explore the industry-leading companies attending this year's Fall Engineering Career Fair. 
+    <p>
+      Explore the industry-leading companies attending this year's Fall Engineering Career Fair.
       Filter by keywords, presentation sessions, and available employment pathways.
     </p>
   </div>
 
-  <div class="nav-right" style="display: flex; align-items: center; justify-content: center; margin-bottom: 40px; flex-wrap: wrap; gap: 16px;">
-    <div class="search-container" style="display: flex; align-items: center; position: relative;">
+  <div class="nav-right">
+    <div class="search-container">
       <input type="text" class="search-input" placeholder="Search companies..." id="company-search">
       <button class="search-icon-btn" aria-label="Submit search">
         <svg viewBox="0 0 24 24">
@@ -228,45 +228,39 @@
       </button>
     </div>
 
-    <div class="nav-search" style="max-width: 180px; flex: 1; position: relative;">
-      <select id="time-filter" style="width: 100%; background: rgba(4, 25, 42, 0.05); border: 1px solid rgba(4, 25, 42, 0.15); border-radius: 30px; padding: 10px 18px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #04192A; outline: none; cursor: pointer;">
-        <option value="" style="background: #FAF8F6; color: #04192A;">Filter by Time</option>
-        <option value="sunday-morning" style="background: #ffffff; color: #04192A;">Sunday Morning</option>
-        <option value="sunday-afternoon" style="background: #ffffff; color: #04192A;">Sunday Afternoon</option>
-        <option value="monday-morning" style="background: #ffffff; color: #04192A;">Monday Morning</option>
-        <option value="monday-afternoon" style="background: #ffffff; color: #04192A;">Monday Afternoon</option>
+    <div class="nav-search" id="time-filter-wrap">
+      <select id="time-filter">
+        <option value="">Filter by Time</option>
+        <option value="sunday-morning">Sunday Morning</option>
+        <option value="sunday-afternoon">Sunday Afternoon</option>
+        <option value="monday-morning">Monday Morning</option>
+        <option value="monday-afternoon">Monday Afternoon</option>
       </select>
     </div>
 
-    <div class="nav-search" style="max-width: 200px; flex: 1; position: relative;">
-      <select id="job-type-filter" style="width: 100%; background: rgba(4, 25, 42, 0.05); border: 1px solid rgba(4, 25, 42, 0.15); border-radius: 30px; padding: 10px 18px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #04192A; outline: none; cursor: pointer;">
-        <option value="" style="background: #FAF8F6; color: #04192A;">Type of Job</option>
-        <option value="internship" style="background: #ffffff; color: #04192A;">Internship</option>
-        <option value="co-op" style="background: #ffffff; color: #04192A;">Co-op</option>
-        <option value="full-time" style="background: #ffffff; color: #04192A;">Full-Time</option>
+    <div class="nav-search" id="job-type-filter-wrap">
+      <select id="job-type-filter">
+        <option value="">Type of Job</option>
+        <option value="internship">Internship</option>
+        <option value="co-op">Co-op</option>
+        <option value="full-time">Full-Time</option>
       </select>
     </div>
   </div>
 
-<p
-  id="company-count"
-  class="stat-label"
-  style="text-align: center; margin-bottom: 32px; text-transform: uppercase; letter-spacing: 0.05em; font-size: 12px; color: rgba(4, 25, 42, 0.6); font-weight: 600;"
->
-  Showing 3 of 3 companies
-</p>
+  <p id="company-count" class="stat-label">Showing 3 of 3 companies</p>
 
-  <div class="company-grid" id="companies-grid" style="margin-bottom: 24px; text-align: left;">
+  <div class="company-grid" id="companies-grid">
     <!-- Company cards will be dynamically inserted here -->
   </div>
 
-  <div id="sticky-btn-wrapper" style="position: static; bottom: 24px; z-index: 100; padding: 12px 0; transition: all 0.3s ease;">
-    <button class="btn btn-ghost" id="load-more-btn" style="color: #04192A; background: #FAF8F6; border: 2px solid rgba(4, 25, 42, 0.35); min-width: 200px; box-shadow: 0 0 0 rgba(0,0,0,0); transition: all 0.2s ease;">
+  <div id="sticky-btn-wrapper">
+    <button class="btn btn-ghost" id="load-more-btn">
       Load More Companies
     </button>
   </div>
-  
-  <div class="thankyou" role="note" style="background: transparent; color: rgba(4, 25, 42, 0.5); font-weight: 600; font-size: 15px; padding: 32px 40px;">
+
+  <div class="thankyou" role="note">
     Thank You for attending!
   </div>
 </section>

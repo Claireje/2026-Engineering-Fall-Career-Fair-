@@ -213,70 +213,355 @@
   <!-- Committees -->
   <div class="committees-wrap">
 
+    <!-- reuse this icon inline via a hidden SVG sprite to avoid repeating it 28 times -->
+    <svg style="display:none">
+      <symbol id="li-icon" viewBox="0 0 24 24">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
+        <rect x="2" y="9" width="4" height="12"/>
+        <circle cx="4" cy="4" r="2"/>
+      </symbol>
+    </svg>
+
     <div class="committee-section">
       <div class="committee-label">Publicity</div>
       <div class="member-grid">
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_75eb64f5cbc5470d891fccc46bb24f4f~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/nithya.jpeg" alt="Nithya Samba" loading="lazy"></div><div class="member-name">Nithya Samba</div><a href="https://www.linkedin.com/in/nithya-samba-940101217/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_9042f3e394b54c03be8a6fdcedf207ef~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/vanya.png" alt="Vanya Krishna" loading="lazy"></div><div class="member-name">Vanya Krishna</div></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_de5339343870411fafa003c8dbae5d23~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/sophia.png" alt="Sophia Taylor" loading="lazy"></div><div class="member-name">Sophia Taylor</div></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_7c6cd835c28b45cebccc546d60e85101~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/huong.jpeg" alt="Huong Huynh" loading="lazy"></div><div class="member-name">Huong Huynh</div><a href="https://www.linkedin.com/in/huong-huynh-53b450275/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_cdb337b8dbc4475aa2f34e766b9fbd75~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/bella.png" alt="Bella Calfas" loading="lazy"></div><div class="member-name">Bella Calfas</div></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_75d3878f8609467d82df3dc6160271f9~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/zhuoer.png" alt="Zhuoer Li" loading="lazy"></div><div class="member-name">Zhuoer Li</div><a href="https://www.linkedin.com/in/zhuoerlium23/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_e78c926cb38e469298995412e9e268c3~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/Carmen_H.jpeg" alt="Carmen Hernandez" loading="lazy"></div><div class="member-name">Carmen Hernandez</div><a href="https://www.linkedin.com/in/carmen-hernandez-015b54215/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_57db05ca323f4250a5fbd12c6bea4d9e~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/gracef.jpeg" alt="Grace Feng" loading="lazy"></div><div class="member-name">Grace Feng</div><a href="https://www.linkedin.com/in/grace-feng24/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_75eb64f5cbc5470d891fccc46bb24f4f~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/nithya.jpeg" alt="Nithya Samba" loading="lazy">
+          </div>
+          <div class="member-name">Nithya Samba</div>
+          <a href="https://www.linkedin.com/in/nithya-samba-940101217/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Nithya Samba on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_9042f3e394b54c03be8a6fdcedf207ef~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/vanya.png" alt="Vanya Krishna" loading="lazy">
+          </div>
+          <div class="member-name">Vanya Krishna</div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_de5339343870411fafa003c8dbae5d23~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/sophia.png" alt="Sophia Taylor" loading="lazy">
+          </div>
+          <div class="member-name">Sophia Taylor</div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_7c6cd835c28b45cebccc546d60e85101~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/huong.jpeg" alt="Huong Huynh" loading="lazy">
+          </div>
+          <div class="member-name">Huong Huynh</div>
+          <a href="https://www.linkedin.com/in/huong-huynh-53b450275/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Huong Huynh on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_cdb337b8dbc4475aa2f34e766b9fbd75~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/bella.png" alt="Bella Calfas" loading="lazy">
+          </div>
+          <div class="member-name">Bella Calfas</div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_75d3878f8609467d82df3dc6160271f9~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/zhuoer.png" alt="Zhuoer Li" loading="lazy">
+          </div>
+          <div class="member-name">Zhuoer Li</div>
+          <a href="https://www.linkedin.com/in/zhuoerlium23/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Zhuoer Li on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_e78c926cb38e469298995412e9e268c3~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/Carmen_H.jpeg" alt="Carmen Hernandez" loading="lazy">
+          </div>
+          <div class="member-name">Carmen Hernandez</div>
+          <a href="https://www.linkedin.com/in/carmen-hernandez-015b54215/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Carmen Hernandez on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_57db05ca323f4250a5fbd12c6bea4d9e~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/gracef.jpeg" alt="Grace Feng" loading="lazy">
+          </div>
+          <div class="member-name">Grace Feng</div>
+          <a href="https://www.linkedin.com/in/grace-feng24/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Grace Feng on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
       </div>
     </div>
 
     <div class="committee-section">
       <div class="committee-label">Hospitality</div>
       <div class="member-grid">
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_8ba37b2fe3f6409984f387c4ac4e86ab~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/anushka.jpeg" alt="Anushka Acharya" loading="lazy"></div><div class="member-name">Anushka Acharya</div><a href="https://www.linkedin.com/in/anushka-acharya-876419267/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_13eddff02e66466f956151d043e3f7f2~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/peak.jpeg" alt="Peak Shinawatra" loading="lazy"></div><div class="member-name">Peak Shinawatra</div><a href="https://www.linkedin.com/in/chayut-shinawatra-39274431b/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_32bddd233f334d01be5f6530974e2223~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/nola.png" alt="Nola Ashcraft" loading="lazy"></div><div class="member-name">Nola Ashcraft</div><a href="https://www.linkedin.com/in/nola-ashcraft-75610832b/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_1dbee8ef9e7c4959a38897d6572d2591~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/somya.jpeg" alt="Somya Valecha" loading="lazy"></div><div class="member-name">Somya Valecha</div><a href="https://www.linkedin.com/in/somya-valecha-a22a2a2a2/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_d872058667944248bca8133e4ce3f104~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/angelina.jpeg" alt="Angelina Burson" loading="lazy"></div><div class="member-name">Angelina Burson</div><a href="https://www.linkedin.com/in/akburson/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_787501114a85470eaadcd2573a87c6a5~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/oliver.png" alt="Oliver Van Note" loading="lazy"></div><div class="member-name">Oliver Van Note</div><a href="https://www.linkedin.com/in/oliver-van-note/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_8ba37b2fe3f6409984f387c4ac4e86ab~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/anushka.jpeg" alt="Anushka Acharya" loading="lazy">
+          </div>
+          <div class="member-name">Anushka Acharya</div>
+          <a href="https://www.linkedin.com/in/anushka-acharya-876419267/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Anushka Acharya on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_13eddff02e66466f956151d043e3f7f2~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/peak.jpeg" alt="Peak Shinawatra" loading="lazy">
+          </div>
+          <div class="member-name">Peak Shinawatra</div>
+          <a href="https://www.linkedin.com/in/chayut-shinawatra-39274431b/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Peak Shinawatra on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_32bddd233f334d01be5f6530974e2223~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/nola.png" alt="Nola Ashcraft" loading="lazy">
+          </div>
+          <div class="member-name">Nola Ashcraft</div>
+          <a href="https://www.linkedin.com/in/nola-ashcraft-75610832b/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Nola Ashcraft on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_1dbee8ef9e7c4959a38897d6572d2591~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/somya.jpeg" alt="Somya Valecha" loading="lazy">
+          </div>
+          <div class="member-name">Somya Valecha</div>
+          <a href="https://www.linkedin.com/in/somya-valecha-a22a2a2a2/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Somya Valecha on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_d872058667944248bca8133e4ce3f104~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/angelina.jpeg" alt="Angelina Burson" loading="lazy">
+          </div>
+          <div class="member-name">Angelina Burson</div>
+          <a href="https://www.linkedin.com/in/akburson/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Angelina Burson on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_787501114a85470eaadcd2573a87c6a5~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/oliver.png" alt="Oliver Van Note" loading="lazy">
+          </div>
+          <div class="member-name">Oliver Van Note</div>
+          <a href="https://www.linkedin.com/in/oliver-van-note/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Oliver Van Note on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
       </div>
     </div>
 
     <div class="committee-section">
       <div class="committee-label">Registration</div>
       <div class="member-grid">
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_1e8ddb6fee934e4b865eace2076799ff~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/sriyan.jpeg" alt="Sriyan Madugula" loading="lazy"></div><div class="member-name">Sriyan Madugula</div><a href="https://www.linkedin.com/in/sriyanm/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_fd6214451f4048a2a94874e25ee16d05~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/allison.png" alt="Allison Park" loading="lazy"></div><div class="member-name">Allison Park</div><a href="https://www.linkedin.com/in/allison-park-34a891207/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_cce14abcd91e4c0eafaa1997a526e7c1~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/michael.jpeg" alt="Michael Capitani" loading="lazy"></div><div class="member-name">Michael Capitani</div><a href="https://www.linkedin.com/in/michael-capitani/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_ce93a065134a42c98a35d2b587cea3df~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/isabelle.jpeg" alt="Isabelle Holden" loading="lazy"></div><div class="member-name">Isabelle Holden</div><a href="https://www.linkedin.com/in/isabelle-holden-21895a2a9/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_1e8ddb6fee934e4b865eace2076799ff~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/sriyan.jpeg" alt="Sriyan Madugula" loading="lazy">
+          </div>
+          <div class="member-name">Sriyan Madugula</div>
+          <a href="https://www.linkedin.com/in/sriyanm/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Sriyan Madugula on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_fd6214451f4048a2a94874e25ee16d05~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/allison.png" alt="Allison Park" loading="lazy">
+          </div>
+          <div class="member-name">Allison Park</div>
+          <a href="https://www.linkedin.com/in/allison-park-34a891207/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Allison Park on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_cce14abcd91e4c0eafaa1997a526e7c1~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/michael.jpeg" alt="Michael Capitani" loading="lazy">
+          </div>
+          <div class="member-name">Michael Capitani</div>
+          <a href="https://www.linkedin.com/in/michael-capitani/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Michael Capitani on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_ce93a065134a42c98a35d2b587cea3df~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/isabelle.jpeg" alt="Isabelle Holden" loading="lazy">
+          </div>
+          <div class="member-name">Isabelle Holden</div>
+          <a href="https://www.linkedin.com/in/isabelle-holden-21895a2a9/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Isabelle Holden on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
       </div>
     </div>
 
     <div class="committee-section">
       <div class="committee-label">Receptions</div>
       <div class="member-grid">
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_86cf98924c5e49b59e96267f5c16ba07~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/paco.jpeg" alt="Paco Haas" loading="lazy"></div><div class="member-name">Paco Haas</div><a href="https://www.linkedin.com/in/francisco-haas/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_4959cd4b21df4823870d8bf4bdf6f1b8~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/emily.png" alt="Emily Choi" loading="lazy"></div><div class="member-name">Emily Choi</div><a href="https://www.linkedin.com/in/seohyeon-choi-741a42327/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_24077f91352a4ff1987c117f3cd03dbf~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/amy.jpeg" alt="Amy Lu" loading="lazy"></div><div class="member-name">Amy Lu</div><a href="https://www.linkedin.com/in/yuhong-lu/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_1f58ca97d38d4c1bac5b349aa3d3c410~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/abi.jpeg" alt="Abi Parivakkam" loading="lazy"></div><div class="member-name">Abi Parivakkam</div><a href="https://www.linkedin.com/in/abiparivakkam/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_86cf98924c5e49b59e96267f5c16ba07~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/paco.jpeg" alt="Paco Haas" loading="lazy">
+          </div>
+          <div class="member-name">Paco Haas</div>
+          <a href="https://www.linkedin.com/in/francisco-haas/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Paco Haas on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_4959cd4b21df4823870d8bf4bdf6f1b8~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/emily.png" alt="Emily Choi" loading="lazy">
+          </div>
+          <div class="member-name">Emily Choi</div>
+          <a href="https://www.linkedin.com/in/seohyeon-choi-741a42327/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Emily Choi on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_24077f91352a4ff1987c117f3cd03dbf~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/amy.jpeg" alt="Amy Lu" loading="lazy">
+          </div>
+          <div class="member-name">Amy Lu</div>
+          <a href="https://www.linkedin.com/in/yuhong-lu/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Amy Lu on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_1f58ca97d38d4c1bac5b349aa3d3c410~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/abi.jpeg" alt="Abi Parivakkam" loading="lazy">
+          </div>
+          <div class="member-name">Abi Parivakkam</div>
+          <a href="https://www.linkedin.com/in/abiparivakkam/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Abi Parivakkam on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
       </div>
     </div>
 
     <div class="committee-section">
       <div class="committee-label">Operations</div>
       <div class="member-grid">
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_84d41bd11b914670a5e50bc1af350161~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/karis.jpeg" alt="Karis Hu" loading="lazy"></div><div class="member-name">Karis Hu</div><a href="https://www.linkedin.com/in/karis-hu/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_6d400ab8e58b41749a2252bae4fd2740~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/marissa.jpeg" alt="Marissa Whitten" loading="lazy"></div><div class="member-name">Marissa Whitten</div><a href="https://www.linkedin.com/in/marissa-whitten/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_13facda7591141eea3e077ba8940df8b~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/natalie.jpeg" alt="Natalie Garvey" loading="lazy"></div><div class="member-name">Natalie Garvey</div><a href="https://www.linkedin.com/in/nataliegarvey/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_df57cb098e4147e689018e11bf109215~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/alba.jpeg" alt="Alba Gutierrez Cucurull" loading="lazy"></div><div class="member-name">Alba Gutierrez Cucurull</div><a href="https://www.linkedin.com/in/albagucu/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_e0918285b0814b35806e7a3057c30344~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/anna.jpeg" alt="Anna Novak" loading="lazy"></div><div class="member-name">Anna Novak</div><a href="https://www.linkedin.com/in/anovak4/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_84d41bd11b914670a5e50bc1af350161~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/karis.jpeg" alt="Karis Hu" loading="lazy">
+          </div>
+          <div class="member-name">Karis Hu</div>
+          <a href="https://www.linkedin.com/in/karis-hu/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Karis Hu on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_6d400ab8e58b41749a2252bae4fd2740~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/marissa.jpeg" alt="Marissa Whitten" loading="lazy">
+          </div>
+          <div class="member-name">Marissa Whitten</div>
+          <a href="https://www.linkedin.com/in/marissa-whitten/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Marissa Whitten on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_13facda7591141eea3e077ba8940df8b~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/natalie.jpeg" alt="Natalie Garvey" loading="lazy">
+          </div>
+          <div class="member-name">Natalie Garvey</div>
+          <a href="https://www.linkedin.com/in/nataliegarvey/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Natalie Garvey on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_df57cb098e4147e689018e11bf109215~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/alba.jpeg" alt="Alba Gutierrez Cucurull" loading="lazy">
+          </div>
+          <div class="member-name">Alba Gutierrez Cucurull</div>
+          <a href="https://www.linkedin.com/in/albagucu/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Alba Gutierrez Cucurull on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_e0918285b0814b35806e7a3057c30344~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/anna.jpeg" alt="Anna Novak" loading="lazy">
+          </div>
+          <div class="member-name">Anna Novak</div>
+          <a href="https://www.linkedin.com/in/anovak4/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Anna Novak on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
       </div>
     </div>
 
     <div class="committee-section">
       <div class="committee-label">Volunteers</div>
       <div class="member-grid">
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_641ba55f51234414beaf54dd4578db2e~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/alyssa.png" alt="Alyssa Fodale" loading="lazy"></div><div class="member-name">Alyssa Fodale</div><a href="https://www.linkedin.com/in/alyssa-fodale/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_7960c9812ebb473a8b9bfc7ce5432943~mv2.jpg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/angela.jpg" alt="Angela Chang" loading="lazy"></div><div class="member-name">Angela Chang</div><a href="https://www.linkedin.com/in/angela-chang-140813283/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_d4f096d091f44b3f858433baf8c17127~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/alisha.png" alt="Alisha Malik" loading="lazy"></div><div class="member-name">Alisha Malik</div><a href="https://www.linkedin.com/in/alisha-m28/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
-        <div class="member-card"><div class="member-photo"><img src="https://static.wixstatic.com/media/bab3e1_e1190985d7614dfeb8306e4fc960770e~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/purvi.jpeg" alt="Purvi Raj" loading="lazy"></div><div class="member-name">Purvi Raj</div><a href="https://www.linkedin.com/in/purviraj/" target="_blank" rel="noopener" class="member-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_641ba55f51234414beaf54dd4578db2e~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/alyssa.png" alt="Alyssa Fodale" loading="lazy">
+          </div>
+          <div class="member-name">Alyssa Fodale</div>
+          <a href="https://www.linkedin.com/in/alyssa-fodale/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Alyssa Fodale on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_7960c9812ebb473a8b9bfc7ce5432943~mv2.jpg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/angela.jpg" alt="Angela Chang" loading="lazy">
+          </div>
+          <div class="member-name">Angela Chang</div>
+          <a href="https://www.linkedin.com/in/angela-chang-140813283/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Angela Chang on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_d4f096d091f44b3f858433baf8c17127~mv2.png/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/alisha.png" alt="Alisha Malik" loading="lazy">
+          </div>
+          <div class="member-name">Alisha Malik</div>
+          <a href="https://www.linkedin.com/in/alisha-m28/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Alisha Malik on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo">
+            <img src="https://static.wixstatic.com/media/bab3e1_e1190985d7614dfeb8306e4fc960770e~mv2.jpeg/v1/fill/w_200,h_200,al_c,q_80,enc_avif,quality_auto/purvi.jpeg" alt="Purvi Raj" loading="lazy">
+          </div>
+          <div class="member-name">Purvi Raj</div>
+          <a href="https://www.linkedin.com/in/purviraj/" target="_blank" rel="noopener" class="member-linkedin" aria-label="Purvi Raj on LinkedIn">
+            <svg viewBox="0 0 24 24"><use href="#li-icon"/></svg>
+          </a>
+        </div>
+
       </div>
     </div>
 
