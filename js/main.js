@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let companies = [];
   let isExpanded = false;
+  let inAttendeeSection = false;
 
   const companiesGrid = document.getElementById("companies-grid");
   const searchInput = document.getElementById("company-search");
@@ -14,6 +15,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const companyCount = document.getElementById("company-count");
   const loadMoreBtn = document.getElementById("load-more-btn");
   const stickyWrapper = document.getElementById("sticky-btn-wrapper");
+  const attendeeSection = document.getElementById("company-search-section");
+
+  // Show/hide sticky button only while the attendees section is on screen
+  if (attendeeSection && stickyWrapper) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        inAttendeeSection = entry.isIntersecting;
+        stickyWrapper.classList.toggle(
+          "is-sticky",
+          inAttendeeSection && loadMoreBtn.style.display !== "none"
+        );
+      },
+      { threshold: 0 }
+    );
+    observer.observe(attendeeSection);
+  }
 
   function clean(value) {
     return value ? value.replace(/^"|"$/g, "").trim() : "";
@@ -132,10 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
       : "Load More Companies";
 
     if (stickyWrapper) {
-      stickyWrapper.classList.toggle(
-        "is-sticky",
-        shouldShowButton && isExpanded
-      );
+      stickyWrapper.classList.toggle("is-sticky", shouldShowButton && inAttendeeSection);
     }
   }
 
@@ -200,12 +214,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const isOpen = nav.classList.toggle('is-open');
       hamburger.setAttribute('aria-expanded', isOpen);
       hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      // Reset all sub-menus when closing the hamburger
+      if (!isOpen) {
+        nav.querySelectorAll('.nav-dropdown.is-open').forEach(d => d.classList.remove('is-open'));
+      }
     });
 
-    // Prevent dropdown triggers from navigating on mobile (they're already expanded)
+    // Tap on Students/Employers toggles their sub-menu on mobile
     nav.querySelectorAll('.nav-dropdown-trigger').forEach(trigger => {
       trigger.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) e.preventDefault();
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          trigger.closest('.nav-dropdown').classList.toggle('is-open');
+        }
       });
     });
 
