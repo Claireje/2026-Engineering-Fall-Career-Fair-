@@ -556,13 +556,19 @@ img {
     gap: 0;
 }
 
-.connecting-img {
+.connecting-img-container {
     padding: 20px;
     background: #061929;
     min-height: 400px;
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     justify-content: center;
+}
+
+.connecting-img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .connecting-text { 
