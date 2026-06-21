@@ -191,7 +191,41 @@ document.addEventListener("DOMContentLoaded", () => {
   timeFilter?.addEventListener("change", resetFilters);
   jobFilter?.addEventListener("change", resetFilters);
 
-  loadHTML("nav-container", "nav.html");
+  loadHTML("nav-container", "nav.html").then(() => {
+    const hamburger = document.querySelector('.nav-hamburger');
+    const nav = document.querySelector('.nav');
+    if (!hamburger || !nav) return;
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+      hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    });
+
+    // Prevent dropdown triggers from navigating on mobile (they're already expanded)
+    nav.querySelectorAll('.nav-dropdown-trigger').forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) e.preventDefault();
+      });
+    });
+
+    // Close menu when a page link is clicked
+    nav.addEventListener('click', (e) => {
+      if (e.target.matches('a') && !e.target.classList.contains('nav-dropdown-trigger')) {
+        nav.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open navigation menu');
+      }
+    });
+
+    // Close when clicking outside the nav
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target)) {
+        nav.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
   loadHTML("footer-container", "footer.html");
   loadCompanies();
   highlightCurrentTimelineItem();

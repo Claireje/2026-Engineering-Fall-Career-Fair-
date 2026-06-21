@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fall Engineering Career Fair 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;0,700;1,600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/img/CF26Logo%203.png">
+  <style>
+/* styles.css */
+
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+html { 
+    font-size: 16px; 
+}
+
+body { 
+    font-family: 'IBM Plex Mono', monospace; 
+    background: #061929; 
+    color: #fff; 
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+img { 
+    display: block; 
+    max-width: 100%; 
+}
+
+/* ── NAV ── */
+.nav {
+    position: sticky; 
+    top: 0; 
+    z-index: 100;
+    background: #061929;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    gap: 20px;
+}
+
+.nav-logo {
+    width: 35px; 
+    height: 50px; 
+    flex-shrink: 0;
+    border-radius: 6px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-size: 11px; 
+    font-weight: 600; 
+    color: #061929;
+    line-height: 1.3; 
+    text-align: center;
+}
+
+.nav-search {
+    flex: 1; 
+    max-width: 480px;
+    position: relative;
+}
+/* ── NAV DROPDOWN ── */
+.nav-dropdown {
+  position: relative;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.nav-link {
+  font-size: 14px;
+  padding: 10px 12px;
+  color: rgba(255,255,255,.7);
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-search {
+  flex: 1;
+  max-width: 320px;
+}
+
+.nav-search .search-input {
+  width: 100%;
+}
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px 0;
+  min-width: 260px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  z-index: 200;
+  margin-top: 8px;
+}
+
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-bottom-color: #fff;
+  border-top: none;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 12px 28px;
+  font-size: 14px;
+  color: #04192A;
+  font-family: 'IBM Plex Mono', monospace;
+  transition: background 0.15s;
+  text-align: center;
+}
+
+.nav-dropdown-menu a:hover {
+  background: #FFF9E8;
+  color: #04192A;
+}
+
+.nav-dropdown-menu a + a {
+  border-top: 1px solid rgba(4, 25, 42, 0.06);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  display: block;
+}
+
+.nav-dropdown-trigger {
+  cursor: pointer;
+}
+
+.nav-search svg {
+    position: absolute; 
+    left: 14px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    opacity: .5; 
+    pointer-events: none;
+}
+
+.nav-search input {
+    width: 100%;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 30px;
+    padding: 9px 18px 9px 44px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px; 
+    color: rgba(255,255,255,.75);
+    outline: none;
+}
+
+.nav-search input::placeholder { 
+    color: rgba(255,255,255,.4); 
+}
+
+.nav-right { 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    flex-shrink: 0; 
+}
+
+.nav-menu {
+    font-size: 14px;
+    padding: 10px 12px;
+    color: rgba(255,255,255,.7); 
+    cursor: pointer; 
+}
+
+/* ── BUTTONS ── */
+.btn { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    font-family: 'IBM Plex Mono', monospace; 
+    font-weight: 600; 
+    border: none; 
+}
+
+.btn-yellow { 
+    background: #FFC800; 
+    color: #04192A; 
+    border-radius: 30px; 
+    padding: 10px 24px; 
+    font-size: 13px; 
+}
+
+.btn-yellow-lg { 
+    background: #FFC800; 
+    color: #04192A; 
+    border-radius: 30px; 
+    padding: 13px 28px; 
+    font-size: 14px; 
+}
+
+.btn-ghost { 
+    background: transparent; 
+    color: #fff; 
+    border: 2px solid rgba(255,255,255,.35); 
+    border-radius: 30px; 
+    padding: 11px 26px; 
+    font-size: 14px; 
+    font-family: 'IBM Plex Mono', monospace; 
+    font-weight: 600; 
+    cursor: pointer; 
+}
+
+/* ── SEARCH BAR ── */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.search-input {
+    width: 320px;
+    padding: 10px 40px 10px 16px;
+    font-size: 14px;
+    border: 1px solid rgba(4, 25, 42, 0.15);
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #04192A;
+    transition: all 0.25s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #04192A;
+    box-shadow: 0 0 0 3px rgba(4, 25, 42, 0.08);
+}
+
+.search-icon-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: #04192A;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ── HERO ── */
+.hero {
+    position: relative;
+    background-image: url('https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/img/homepage_image.png');
+    padding: 64px 40px 0;
+    overflow: hidden;
+    min-height: 520px;
+}
+#nav-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#nav-container .nav {
+  position: relative;
+  top: auto;
+  z-index: 1000;
+}
+
+.hero-bg {
+    position: absolute; 
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, #061929 100%);
+    pointer-events: none;
+}
+
+.hero-inner {
+    position: relative; 
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-eyebrow {
+    font-size: 11px; 
+    font-weight: 600; 
+    letter-spacing: .12em;
+    color: #FFC800; 
+    margin-bottom: 14px;
+}
+
+.hero-title {
+    font-family: 'Crimson Text', serif;
+    font-size: clamp(52px, 6vw, 90px);
+    font-weight: 600; 
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.hero-title .yellow-bg {
+    display: inline-block; 
+    background: #FFC800; 
+    color: #04192A;
+    padding: 0 8px;
+}
+
+.hero-hosted {
+    font-family: 'Crimson Text', serif;
+    font-size: 18px; 
+    font-weight: 600;
+    color: rgba(255,255,255,.75);
+    margin-bottom: 28px;
+}
+
+.hero-pills {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.pill {
+    display: inline-flex; 
+    align-items: center; 
+    gap: 7px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 30px;
+    padding: 7px 16px;
+    font-size: 12px; 
+    color: rgba(255,255,255,.8);
+}
+
+.pill svg { 
+    flex-shrink: 0; 
+}
+
+.hero-btns { 
+    display: flex; 
+    gap: 12px; 
+    flex-wrap: wrap; 
+}
+
+.hero-stats {
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px;
+    padding-top: 4px; 
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.res-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* ── TIMELINE ── */
+.timeline-section {
+    background: #FAF8F6;
+}
+
+.timeline-section p {
+    text-align: center;
+    width: 100%;
+}
+
+.timeline-section .section-title {
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+    color: #04192A;
+}
+
+.tl-wrap {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    gap: 0;
+    position: relative;
+}
+
+.tl-line {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+}
+
+.tl-line-inner {
+    width: 3px;
+    flex: 1;
+    background: linear-gradient(to bottom, #FFC800 0%, rgba(255,200,0,.2) 100%);
+    border-radius: 2px;
+}
+
+.tl-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.tl-col-left {
+    grid-column: 1;
+    align-items: flex-end;
+    padding-right: 28px;
+}
+
+.tl-col-right {
+    grid-column: 3;
+    align-items: flex-start;
+    padding-left: 28px;
+}
+
+.tl-item {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 16px;
+    padding: 18px 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.06);
+    width: 100%;
+    position: relative;
+}
+
+.tl-item.featured {
+    border-color: #FFC800;
+    border-width: 2px;
+}
+
+.tl-dot {
+    width: 14px;
+    height: 14px;
+    background: #FFC800;
+    border-radius: 50%;
+    margin-top: 30px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-num {
+    font-family: 'Crimson Text', serif;
+    font-size: clamp(44px, 4vw, 64px);
+    color: #FFC800; 
+    line-height: 1;
+}
+
+.stat-label { 
+    font-size: 12px; 
+    color: rgba(255,255,255,.55); 
+    margin-top: 2px; 
+}
+
+/* ── TICKER ── */
+.ticker {
+    background: #FFC800;
+    padding: 11px 0;
+    overflow: hidden; 
+    white-space: nowrap;
+}
+
+.ticker-track {
+    display: inline-flex; 
+    gap: 40px;
+    animation: tick 24s linear infinite;
+}
+
+.ticker-track img {
+    height: auto;
+    max-height: 20px;   
+    max-width: 130px;   
+    object-fit: contain; 
+    display: block;
+    flex-shrink: 0;
+    filter: grayscale(0) opacity(1);
+    transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+.ticker-track span { 
+    font-size: 13px; 
+    font-weight: 600; 
+    color: #061929; 
+}
+
+.ticker-track .dot { 
+    opacity: .35; 
+}
+
+@keyframes tick { 
+    0% { transform: translateX(0); } 
+    100% { transform: translateX(-50%); } 
+}
+
+/* ── SECTION HELPERS ── */
+.section { 
+    padding: 72px 40px; 
+}
+
+.section-tag {
+    font-size: 11px; 
+    font-weight: 600; 
+    letter-spacing: .13em;
+    color: rgba(0,0,0,.4); 
+    margin-bottom: 10px;
+}
+
+.section-tag-light { 
+    color: rgba(255,255,255,.4); 
+}
+
+.section-title {
+    font-family: 'Crimson Text', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 600; 
+    line-height: 1.1;
+    margin-bottom: 36px;
+}
+
+
+/* ── CONNECTING / ABOUT ── */
+.connecting {
+    background: #061929;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.connecting-img {
+    padding: 20px;
+    background: #061929;
+    min-height: 400px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.connecting-text { 
+    padding: 70px 56px; 
+}
+
+.connecting-text-company { 
+    padding-top: 0px; 
+    padding-bottom: 10px; 
+    color: rgba(0,0,0,.4); 
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.connecting-text .section-title { 
+    color: #fff; 
+}
+
+.connecting-text p { 
+    font-size: 14px; 
+    line-height: 1.85; 
+    color: #848C93; 
+    margin-bottom: 32px; 
+}
+
+/* ── RESOURCES ── */
+.resources {
+    background: #FCF7F3;
+    padding: 60px 20px;
+}
+
+.resources .section-tag {
+    text-align: center;
+    width: 100%;
+    color: rgba(4, 25, 42, 0.6);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.resources .section-title {
+    text-align: center;
+    width: 100%;
+    color: #04192A;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+.res-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.res-card {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.res-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(4, 25, 42, 0.05);
+}
+
+.res-image {
+    width: 100%;
+    height: 160px;
+    background: #F0EBE3;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.res-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.res-icon {
+    width: 48px;
+    height: 48px;
+    background: #F0EBE3;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.res-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.res-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: #04192A;
+    fill: none;
+    stroke-width: 1.6;
+}
+
+.res-body {
+    padding: 22px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.res-card h3,
+.company-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #04192A;
+    line-height: 1.4;
+}
+
+.res-card p,
+.company-card p {
+    font-size: 13px;
+    color: rgba(0,0,0,.5);
+    line-height: 1.75;
+}
+
+/* ── COMPANY GRID & CARDS ── */
+.company-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 24px;
+    text-align: left;
+}
+
+.company-card {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 20px;
+    padding: 28px 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.company-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(4, 25, 42, 0.05);
+}
+
+/* ── TIMELINE ── */
+
+.timeline-section {
+  background: #FAF8F6;
+}
+
+.timeline-section .section-title,
+.timeline-section .section-tag {
+  text-align: center;
+  width: 100%;
+  color: #04192A;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 60px auto 0;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background: rgba(255, 200, 0, 0.2);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 0 38px;
+  margin-bottom: -8px;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 14px;
+  height: 14px;
+  background: #FFC800;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-item.left::before {
+  right: -7px;
+}
+
+.timeline-item.right::before {
+  left: -7px;
+}
+
+.timeline-content {
+  background: #fff;
+  border-radius: 22px;
+  padding: 22px 26px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 4px 16px rgba(0,0,0,.05);
+  transition: 0.25s ease;
+}
+
+.timeline-item.current .timeline-content {
+  border: 2px solid #FFC800;
+  background: #FFF9E8;
+}
+
+.timeline-item.upcoming .timeline-content {
+  border: 2px solid rgba(255,200,0,.35);
+  background: #FFFDF7;
+}
+
+/* glowing active connector */
+.timeline-item.current::after,
+.timeline-item.upcoming::after {
+  content: "";
+  position: absolute;
+  top: 36px;
+  height: 3px;
+  background: #FFC800;
+  z-index: 1;
+}
+/* left cards */
+.timeline-item.left.current::after,
+.timeline-item.left.upcoming::after {
+  right: 0;
+  width: 38px;
+}
+/* right cards */
+.timeline-item.right.current::after,
+.timeline-item.right.upcoming::after {
+  left: 0;
+  width: 38px;
+}
+
+.tl-date {
+  font-size: 16px;
+  font-weight: 700;
+  color: #04192A;
+  margin-bottom: 8px;
+}
+
+.tl-date-note {
+  font-size: 11px;
+  color: rgba(0,0,0,.4);
+  margin-bottom: 6px;
+}
+
+.tl-event {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(0,0,0,.58);
+}
+
+@media (max-width: 900px) {
+
+  .timeline::before {
+    left: 24px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 70px;
+    padding-right: 20px;
+    margin-bottom: 18px;
+  }
+
+  .timeline-item::before {
+    left: 17px !important;
+  }
+
+}
+
+/* ── ATTENDEES ── */
+.attendees {
+    text-align: center;
+    width: 100%;
+    background: #FAF8F6;
+    color: #04192A;
+    padding: 72px 40px;
+}
+
+.attendees .section-title {
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+    color: #04192A;
+}
+
+.attendees .section-tag {
+    color: rgba(4, 25, 42, 0.5);
+}
+
+.companies-header p {
+    color: rgba(4, 25, 42, 0.7);
+    max-width: 650px;
+    margin: 0 auto 20px;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* company search controls row */
+.attendees .nav-right {
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* filter select wrappers */
+#time-filter-wrap {
+    max-width: 180px;
+    flex: 1;
+    position: relative;
+}
+
+#job-type-filter-wrap {
+    max-width: 200px;
+    flex: 1;
+    position: relative;
+}
+
+/* filter selects */
+#time-filter,
+#job-type-filter {
+    width: 100%;
+    background: rgba(4, 25, 42, 0.05);
+    border: 1px solid rgba(4, 25, 42, 0.15);
+    border-radius: 30px;
+    padding: 10px 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: #04192A;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+}
+
+#time-filter option,
+#job-type-filter option {
+    background: #ffffff;
+    color: #04192A;
+}
+
+#time-filter option:first-child,
+#job-type-filter option:first-child {
+    background: #FAF8F6;
+}
+
+/* company count label */
+#company-count {
+    text-align: center;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    color: rgba(4, 25, 42, 0.6);
+    font-weight: 600;
+}
+
+/* load more button wrapper */
+#sticky-btn-wrapper {
+    position: static;
+    z-index: 100;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+/* load more button — light-bg variant of .btn-ghost */
+#load-more-btn {
+    color: #04192A;
+    background: #FAF8F6;
+    border: 2px solid rgba(4, 25, 42, 0.35);
+    min-width: 200px;
+    box-shadow: none;
+    transition: all 0.2s ease;
+}
+
+.attendees-logos {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 16px;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0,0,0,.2);
+    font-size: 13px;
+    letter-spacing: .05em;
+}
+
+.thankyou {
+    text-align: center;
+    padding: 32px 40px;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(4, 25, 42, 0.5);
+}
+
+/* ── FOOTER ── */
+footer {
+    background: #000;
+    padding: 36px 40px 24px;
+    color: #fff;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 28px;
+}
+
+.footer-brand-logo {
+    width: 54px;
+    height: 54px;
+    background: #FFC800;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #061929;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    line-height: 1.75;
+    color: rgba(255,255,255,.4);
+    margin-bottom: 16px;
+}
+
+.footer-contact a {
+    display: block;
+    font-size: 12px;
+    color: rgba(255,255,255,.5);
+    margin-bottom: 5px;
+}
+.footer-contact img {
+    margin-top: 20px;
+}
+
+
+.footer-contact a:hover {
+    color: #FFC800;
+}
+
+.footer-col-head {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #FFC800;
+    display: inline-block;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-links a {
+    font-size: 12px;
+    color: rgba(255,255,255,.55);
+}
+
+.footer-links a:hover {
+    color: rgba(255,255,255,.9);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 11px;
+    color: rgba(255,255,255,.3);
+}
+
+/* ── RESPONSIVE ── */
+@media (min-width: 768px) {
+    .res-grid,
+    .company-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .nav { padding: 0 20px; }
+    .nav-search { display: none; }
+    .hero { padding: 48px 20px 0; }
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    .connecting { grid-template-columns: 1fr; }
+    .section { padding: 48px 20px; }
+    .res-grid,
+    .company-grid { grid-template-columns: 1fr; }
+    .tl-wrap { grid-template-columns: 1fr; }
+    .tl-col-left, .tl-col-right {
+        grid-column: 1;
+        padding: 0;
+        align-items: flex-start;
+    }
+    .tl-line { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid > div:first-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 768px) {
+    .search-input {
+        width: 0;
+        padding: 0;
+        border-color: transparent;
+        background: transparent;
+        pointer-events: none;
+    }
+
+    .search-container {
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    .search-icon-btn {
+        position: static;
+        padding: 10px;
+        border-radius: 50%;
+        transition: background-color 0.2s ease;
+    }
+
+    .search-icon-btn:hover {
+        background-color: rgba(4, 25, 42, 0.05);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title { font-size: 44px; }
+    .footer-grid { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/homepage.html" class="nav-logo">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/img/CF26Logo.png" alt="Career Fair 2026 Logo">
+  </a>
+  <div class="nav-links">
+    <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/homepage.html" class="nav-link">Home</a>
+    <div class="nav-dropdown">
+      <a href="#" class="nav-link nav-dropdown-trigger">Students</a>
+      <div class="nav-dropdown-menu">
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/student-guide.html">Student Guide</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/career-fair-plus.html">Career Fair Plus App</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/egl-coat-check.html">EGL Coat Check</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/volunteer.html">Volunteer</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <a href="#" class="nav-link nav-dropdown-trigger">Employers</a>
+      <div class="nav-dropdown-menu">
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/employer-faq.html">Employer FAQ</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/receptions.html">Receptions</a>
+      </div>
+    </div>
+    <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/maps_fall%20engineering%20career%20fair.html" class="nav-link">Maps</a>
+    <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/about-us.html" class="nav-link">About</a>
+  </div>
+  <div class="nav-search">
+    <div class="search-container">
+      <input type="search" class="search-input" placeholder="Search companies..." aria-label="Search companies">
+      <button class="search-icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-right">
+    <button class="btn btn-yellow">REGISTER</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eyebrow">UNIVERSITY OF MICHIGAN — ANN ARBOR, MI</p>
+      <h1 class="hero-title" id="hero-heading">
+        Fall Engineering<br>
+        <span class="yellow-bg">Career Fair</span>
+      </h1>
+      <p class="hero-hosted">Hosted by Society of Women Engineers &amp; Tau Beta Pi</p>
+      <div class="hero-pills" role="list" aria-label="Event details">
+        <span class="pill" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Sep 15–16, 2026
+        </span>
+        <span class="pill" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          10:00 AM – 4:00 PM
+        </span>
+        <span class="pill" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          North Campus
+        </span>
+      </div>
+      <div class="hero-btns">
+        <button class="btn btn-yellow-lg">Register Now →</button>
+        <button class="btn-ghost">View Schedule</button>
+      </div>
+    </div>
+    <div class="hero-stats" aria-label="Event statistics">
+      <div>
+        <div class="stat-num">200+</div>
+        <div class="stat-label">Companies Attending</div>
+      </div>
+      <div>
+        <div class="stat-num">41</div>
+        <div class="stat-label">Years Running</div>
+      </div>
+      <div>
+        <div class="stat-num">4K+</div>
+        <div class="stat-label">Students Expected</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/google.svg" alt="Google">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/exxon.png" alt="ExxonMobil">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/capital.png" alt="Capital One">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/boaing.png" alt="Boeing">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/caterpiller.png" alt="Caterpillar">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/thetrade.png" alt="The Trade Desk">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/rtx.png" alt="RTX">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/texas.png" alt="Texas Instruments">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/grainger.png" alt="Grainger">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/ford.png" alt="Ford">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/walbridge.png" alt="Walbridge">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/stryker.png" alt="Stryker">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/johnson.png" alt="Johnson Controls">
+  </div>
+</div>
+
+<!-- CONNECTING / ABOUT -->
+<section class="connecting" aria-labelledby="connecting-heading">
+  <div class="connecting-img-container">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/img/image%208.png" alt="Students and recruiters networking at the 2026 Career Fair" class="connecting-img">
+  </div>
+  <div class="connecting-text">
+    <p class="section-tag section-tag-light">ABOUT THE FAIR</p>
+    <h2 class="section-title" id="connecting-heading">Connecting Tomorrow's Engineers</h2>
+    <p>For four decades, the Fall Engineering Career Fair has been the premier recruiting event
+      connecting top engineering talent with industry-leading companies. Join over 4,000 students
+      and 200+ employers for two days of meaningful connections.</p>
+    <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/about-us.html" class="btn btn-yellow-lg">Learn more →</a>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="section resources" aria-labelledby="resources-heading">
+  <p class="section-tag">RESOURCES</p>
+  <h2 class="section-title" id="resources-heading">Prepare for Success</h2>
+  <div class="res-grid">
+
+    <a href="#company-search-section" class="res-card-link">
+      <article class="res-card">
+        <div class="res-image">
+          <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/img/company_search.avif" alt="Company research">
+        </div>
+        <div class="res-body">
+          <h3>Company Research</h3>
+          <p>Access employer profiles and job listings before the fair to plan your visits and target the right recruiters.</p>
+        </div>
+      </article>
+    </a>
+
+    <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/career-fair-plus.html" class="res-card-link">
+      <article class="res-card">
+        <div class="res-image">
+          <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/img/fair_plus.png" alt="Career Fair Plus App">
+        </div>
+        <div class="res-body">
+          <h3>Career Fair Plus App</h3>
+          <p>Download the app to explore employers, navigate the career fair floor, and keep track of conversations throughout the event.</p>
+        </div>
+      </article>
+    </a>
+
+    <article class="res-card">
+      <div class="res-image">
+        <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/img/receptions.avif" alt="Receptions">
+      </div>
+      <div class="res-body">
+        <h3>Receptions</h3>
+        <p>Attend pre-fair receptions Sep 13–14 to network with recruiters in a relaxed, informal setting.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section timeline-section" aria-labelledby="timeline-heading">
+  <p class="section-tag">SCHEDULE</p>
+  <h2 class="section-title" id="timeline-heading">Event Timeline</h2>
+  <div class="timeline">
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <div class="tl-date">May 20th</div>
+        <div class="tl-event">Company Registration Opens</div>
+      </div>
+    </div>
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <div class="tl-date">August 1st</div>
+        <div class="tl-event">Preliminary Company List Released</div>
+      </div>
+    </div>
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <div class="tl-date">August 21st</div>
+        <div class="tl-date-note">or when capacity is reached</div>
+        <div class="tl-event">Company Registration Closes</div>
+      </div>
+    </div>
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <div class="tl-date">August 25th</div>
+        <div class="tl-event">Final Company List Published</div>
+      </div>
+    </div>
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <div class="tl-date">September 13th</div>
+        <div class="tl-event">Reception Night — Day 1 Employers</div>
+      </div>
+    </div>
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <div class="tl-date">September 14th</div>
+        <div class="tl-event">Reception Night — Day 2 Employers</div>
+      </div>
+    </div>
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <div class="tl-date">September 15–16th</div>
+        <div class="tl-event">Fall Engineering Career Fair — Days 1 &amp; 2</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATTENDEES -->
+<section class="section attendees" id="company-search-section" aria-labelledby="attendees-heading">
+  <p class="section-tag">ATTENDEES</p>
+  <div class="companies-header">
+    <h2 class="section-title" id="attendees-heading">Companies in Attendance</h2>
+    <p>
+      Explore the industry-leading companies attending this year's Fall Engineering Career Fair.
+      Filter by keywords, presentation sessions, and available employment pathways.
+    </p>
+  </div>
+  <div class="nav-right">
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search companies..." id="company-search">
+      <button class="search-icon-btn" aria-label="Submit search">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="nav-search" id="time-filter-wrap">
+      <select id="time-filter">
+        <option value="">Filter by Time</option>
+        <option value="sunday-morning">Sunday Morning</option>
+        <option value="sunday-afternoon">Sunday Afternoon</option>
+        <option value="monday-morning">Monday Morning</option>
+        <option value="monday-afternoon">Monday Afternoon</option>
+      </select>
+    </div>
+    <div class="nav-search" id="job-type-filter-wrap">
+      <select id="job-type-filter">
+        <option value="">Type of Job</option>
+        <option value="internship">Internship</option>
+        <option value="co-op">Co-op</option>
+        <option value="full-time">Full-Time</option>
+      </select>
+    </div>
+  </div>
+  <p id="company-count" class="stat-label">Showing 3 of 3 companies</p>
+  <div class="company-grid" id="companies-grid">
+    <!-- Company cards dynamically inserted here -->
+  </div>
+  <div id="sticky-btn-wrapper">
+    <button class="btn btn-ghost" id="load-more-btn">Load More Companies</button>
+  </div>
+  <div class="thankyou" role="note">Thank You for attending!</div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/homepage.html" class="nav-logo" aria-label="Fall Engineering Career Fair Home">
+        <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/img/CF26Logo.png" alt="Career Fair 2026 Logo">
+      </a>
+      <div class="footer-contact">
+        <a href="https://www.sweumich.org/" target="_blank" rel="noopener">
+          <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/swe_white_trans.png" alt="SWE at Michigan" width="100">
+        </a>
+        <a href="mailto:swe.eboard@umich.edu">
+          <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/tbp_white_trans.png" alt="Tau Beta Pi" width="130">
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-head">Students</div>
+      <nav class="footer-links">
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/student-guide.html">Student Guide</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/career-fair-plus.html">Career Fair Plus App</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/egl-coat-check.html">EGL Coat Check</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/volunteer.html">Volunteer</a>
+      </nav>
+    </div>
+    <div>
+      <div class="footer-col-head">Employers</div>
+      <nav class="footer-links">
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/employer-faq.html">Employer FAQ</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/receptions.html">Employer Receptions</a>
+        <a href="mailto:eng-careerfair@umich.edu">Contact ECRC</a>
+      </nav>
+    </div>
+    <div>
+      <div class="footer-col-head">Contact</div>
+      <nav class="footer-links">
+        <a href="mailto:eng-careerfair@umich.edu">eng-careerfair@umich.edu</a>
+        <a href="https://www.sweumich.org/" target="_blank" rel="noopener">SWE at Michigan</a>
+        <a href="mailto:swe.eboard@umich.edu">swe.eboard@umich.edu</a>
+      </nav>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Society of Women Engineers &amp; Tau Beta Pi — University of Michigan</span>
+    <span>Fall Engineering Career Fair</span>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQY2KBZyFcXi-2NzH4qrMux9GfhJcJosyRVx9cwWtvZ09bOUJIUbJ5aWBczFt0ZFfAr4_R0gv1LQmXe/pub?gid=1044588374&single=true&output=csv";
+  const INITIAL_VISIBLE_COUNT = 3;
+  let companies = [];
+  let isExpanded = false;
+
+  const companiesGrid = document.getElementById("companies-grid");
+  const searchInput = document.getElementById("company-search");
+  const timeFilter = document.getElementById("time-filter");
+  const jobFilter = document.getElementById("job-type-filter");
+  const companyCount = document.getElementById("company-count");
+  const loadMoreBtn = document.getElementById("load-more-btn");
+  const stickyWrapper = document.getElementById("sticky-btn-wrapper");
+
+  function clean(value) {
+    return value ? value.replace(/^"|"$/g, "").trim() : "";
+  }
+
+  function parseCSV(text) {
+    const rows = text.trim().split("\n");
+    return rows.slice(1).map(row => {
+      const values = row.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g) || [];
+      return {
+        name: clean(values[0]),
+        time: clean(values[1]),
+        type: clean(values[2]),
+        desc: clean(values[3]),
+        logo: clean(values[4])
+      };
+    });
+  }
+
+  async function loadCompanies() {
+    if (!companiesGrid) return;
+    try {
+      const response = await fetch(CSV_URL);
+      const text = await response.text();
+      companies = parseCSV(text);
+      renderCompanies();
+    } catch (error) {
+      console.error("Error loading companies:", error);
+    }
+  }
+
+  function renderCompanies() {
+    companiesGrid.innerHTML = "";
+    companies.forEach(company => {
+      const cardHTML = `
+        <article class="company-card">
+          <div class="res-icon" style="background: #ffffff;">
+            <img src="${company.logo}" alt="${company.name}">
+          </div>
+          <h3>${company.name}</h3>
+          <p style="font-size: 11px; color: #a07800; font-weight: 600; letter-spacing: 0.05em; margin: 4px 0 8px;">
+            ${company.time} • ${company.type}
+          </p>
+          <p>${company.desc}</p>
+        </article>
+      `;
+      companiesGrid.insertAdjacentHTML("beforeend", cardHTML);
+    });
+    filterCompanies();
+  }
+
+  function filterCompanies() {
+    if (!companiesGrid) return;
+    const searchValue = searchInput?.value.toLowerCase().trim() || "";
+    const timeValue = timeFilter?.value.replace("-", " ").toLowerCase().trim() || "";
+    const jobValue = jobFilter?.value.toLowerCase().trim() || "";
+    const cards = companiesGrid.querySelectorAll(".company-card");
+    let matchedCount = 0;
+    let visibleCount = 0;
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      const matchesSearch = !searchValue || text.includes(searchValue);
+      const matchesTime = !timeValue || text.includes(timeValue);
+      const matchesJob = !jobValue || text.includes(jobValue);
+      const matchesFilters = matchesSearch && matchesTime && matchesJob;
+      if (!matchesFilters) { card.style.display = "none"; return; }
+      matchedCount++;
+      const shouldShow = isExpanded || matchedCount <= INITIAL_VISIBLE_COUNT;
+      card.style.display = shouldShow ? "flex" : "none";
+      if (shouldShow) visibleCount++;
+    });
+    if (companyCount) {
+      companyCount.innerText = `Showing ${visibleCount} of ${companies.length} companies`;
+    }
+    updateLoadMoreButton(matchedCount);
+  }
+
+  function updateLoadMoreButton(matchedCount) {
+    if (!loadMoreBtn) return;
+    const shouldShowButton = matchedCount > INITIAL_VISIBLE_COUNT;
+    loadMoreBtn.style.display = shouldShowButton ? "inline-flex" : "none";
+    loadMoreBtn.innerText = isExpanded ? "Show Less" : "Load More Companies";
+    if (stickyWrapper) {
+      stickyWrapper.classList.toggle("is-sticky", shouldShowButton && isExpanded);
+    }
+  }
+
+  function resetFilters() {
+    isExpanded = false;
+    filterCompanies();
+  }
+
+  function highlightCurrentTimelineItem() {
+    const today = new Date();
+    const currentYear = today.getFullYear();
+    const timelineDates = {
+      "May 20th": new Date(currentYear, 4, 20),
+      "August 1st": new Date(currentYear, 7, 1),
+      "August 21st": new Date(currentYear, 7, 21),
+      "August 25th": new Date(currentYear, 7, 25),
+      "September 13th": new Date(currentYear, 8, 13),
+      "September 14th": new Date(currentYear, 8, 14),
+      "September 15–16th": new Date(currentYear, 8, 15)
+    };
+    let closestItem = null;
+    let closestDiff = Infinity;
+    document.querySelectorAll(".timeline-item").forEach(item => {
+      item.classList.remove("current", "upcoming");
+      const dateText = item.querySelector(".tl-date")?.innerText.trim();
+      const eventDate = timelineDates[dateText];
+      if (!eventDate) return;
+      const diffDays = Math.ceil((eventDate - today) / (1000 * 60 * 60 * 24));
+      if (diffDays >= 0 && diffDays < closestDiff) {
+        closestDiff = diffDays;
+        closestItem = item;
+      }
+    });
+    closestItem?.classList.add("current");
+  }
+
+  loadMoreBtn?.addEventListener("click", () => {
+    isExpanded = !isExpanded;
+    filterCompanies();
+  });
+  searchInput?.addEventListener("input", resetFilters);
+  timeFilter?.addEventListener("change", resetFilters);
+  jobFilter?.addEventListener("change", resetFilters);
+
+  loadCompanies();
+  highlightCurrentTimelineItem();
+});
+</script>
+</body>
+</html>

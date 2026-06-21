@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maps — Fall Engineering Career Fair 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,600;0,700;1,600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/img/CF26Logo%203.png">
+  <style>
+/* styles.css */
+
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+html { 
+    font-size: 16px; 
+}
+
+body { 
+    font-family: 'IBM Plex Mono', monospace; 
+    background: #061929; 
+    color: #fff; 
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+img { 
+    display: block; 
+    max-width: 100%; 
+}
+
+/* ── NAV ── */
+.nav {
+    position: sticky; 
+    top: 0; 
+    z-index: 100;
+    background: #061929;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    gap: 20px;
+}
+
+.nav-logo {
+    width: 35px; 
+    height: 50px; 
+    flex-shrink: 0;
+    border-radius: 6px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-size: 11px; 
+    font-weight: 600; 
+    color: #061929;
+    line-height: 1.3; 
+    text-align: center;
+}
+
+.nav-search {
+    flex: 1; 
+    max-width: 480px;
+    position: relative;
+}
+/* ── NAV DROPDOWN ── */
+.nav-dropdown {
+  position: relative;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.nav-link {
+  font-size: 14px;
+  padding: 10px 12px;
+  color: rgba(255,255,255,.7);
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-search {
+  flex: 1;
+  max-width: 320px;
+}
+
+.nav-search .search-input {
+  width: 100%;
+}
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px 0;
+  min-width: 260px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  z-index: 200;
+  margin-top: 8px;
+}
+
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-bottom-color: #fff;
+  border-top: none;
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 12px 28px;
+  font-size: 14px;
+  color: #04192A;
+  font-family: 'IBM Plex Mono', monospace;
+  transition: background 0.15s;
+  text-align: center;
+}
+
+.nav-dropdown-menu a:hover {
+  background: #FFF9E8;
+  color: #04192A;
+}
+
+.nav-dropdown-menu a + a {
+  border-top: 1px solid rgba(4, 25, 42, 0.06);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  display: block;
+}
+
+.nav-dropdown-trigger {
+  cursor: pointer;
+}
+
+.nav-search svg {
+    position: absolute; 
+    left: 14px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    opacity: .5; 
+    pointer-events: none;
+}
+
+.nav-search input {
+    width: 100%;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 30px;
+    padding: 9px 18px 9px 44px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px; 
+    color: rgba(255,255,255,.75);
+    outline: none;
+}
+
+.nav-search input::placeholder { 
+    color: rgba(255,255,255,.4); 
+}
+
+.nav-right { 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    flex-shrink: 0; 
+}
+
+.nav-menu {
+    font-size: 14px;
+    padding: 10px 12px;
+    color: rgba(255,255,255,.7); 
+    cursor: pointer; 
+}
+
+/* ── BUTTONS ── */
+.btn { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    font-family: 'IBM Plex Mono', monospace; 
+    font-weight: 600; 
+    border: none; 
+}
+
+.btn-yellow { 
+    background: #FFC800; 
+    color: #04192A; 
+    border-radius: 30px; 
+    padding: 10px 24px; 
+    font-size: 13px; 
+}
+
+.btn-yellow-lg { 
+    background: #FFC800; 
+    color: #04192A; 
+    border-radius: 30px; 
+    padding: 13px 28px; 
+    font-size: 14px; 
+}
+
+.btn-ghost { 
+    background: transparent; 
+    color: #fff; 
+    border: 2px solid rgba(255,255,255,.35); 
+    border-radius: 30px; 
+    padding: 11px 26px; 
+    font-size: 14px; 
+    font-family: 'IBM Plex Mono', monospace; 
+    font-weight: 600; 
+    cursor: pointer; 
+}
+
+/* ── SEARCH BAR ── */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.search-input {
+    width: 320px;
+    padding: 10px 40px 10px 16px;
+    font-size: 14px;
+    border: 1px solid rgba(4, 25, 42, 0.15);
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #04192A;
+    transition: all 0.25s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #04192A;
+    box-shadow: 0 0 0 3px rgba(4, 25, 42, 0.08);
+}
+
+.search-icon-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: #04192A;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ── HERO ── */
+.hero {
+    position: relative;
+    background-image: url('https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/img/homepage_image.png');
+    padding: 64px 40px 0;
+    overflow: hidden;
+    min-height: 520px;
+}
+#nav-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#nav-container .nav {
+  position: relative;
+  top: auto;
+  z-index: 1000;
+}
+
+.hero-bg {
+    position: absolute; 
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, #061929 100%);
+    pointer-events: none;
+}
+
+.hero-inner {
+    position: relative; 
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-eyebrow {
+    font-size: 11px; 
+    font-weight: 600; 
+    letter-spacing: .12em;
+    color: #FFC800; 
+    margin-bottom: 14px;
+}
+
+.hero-title {
+    font-family: 'Crimson Text', serif;
+    font-size: clamp(52px, 6vw, 90px);
+    font-weight: 600; 
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.hero-title .yellow-bg {
+    display: inline-block; 
+    background: #FFC800; 
+    color: #04192A;
+    padding: 0 8px;
+}
+
+.hero-hosted {
+    font-family: 'Crimson Text', serif;
+    font-size: 18px; 
+    font-weight: 600;
+    color: rgba(255,255,255,.75);
+    margin-bottom: 28px;
+}
+
+.hero-pills {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.pill {
+    display: inline-flex; 
+    align-items: center; 
+    gap: 7px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 30px;
+    padding: 7px 16px;
+    font-size: 12px; 
+    color: rgba(255,255,255,.8);
+}
+
+.pill svg { 
+    flex-shrink: 0; 
+}
+
+.hero-btns { 
+    display: flex; 
+    gap: 12px; 
+    flex-wrap: wrap; 
+}
+
+.hero-stats {
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px;
+    padding-top: 4px; 
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.res-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* ── TIMELINE ── */
+.timeline-section {
+    background: #FAF8F6;
+}
+
+.timeline-section p {
+    text-align: center;
+    width: 100%;
+}
+
+.timeline-section .section-title {
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+    color: #04192A;
+}
+
+.tl-wrap {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    gap: 0;
+    position: relative;
+}
+
+.tl-line {
+    grid-column: 2;
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+}
+
+.tl-line-inner {
+    width: 3px;
+    flex: 1;
+    background: linear-gradient(to bottom, #FFC800 0%, rgba(255,200,0,.2) 100%);
+    border-radius: 2px;
+}
+
+.tl-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.tl-col-left {
+    grid-column: 1;
+    align-items: flex-end;
+    padding-right: 28px;
+}
+
+.tl-col-right {
+    grid-column: 3;
+    align-items: flex-start;
+    padding-left: 28px;
+}
+
+.tl-item {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 16px;
+    padding: 18px 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.06);
+    width: 100%;
+    position: relative;
+}
+
+.tl-item.featured {
+    border-color: #FFC800;
+    border-width: 2px;
+}
+
+.tl-dot {
+    width: 14px;
+    height: 14px;
+    background: #FFC800;
+    border-radius: 50%;
+    margin-top: 30px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-num {
+    font-family: 'Crimson Text', serif;
+    font-size: clamp(44px, 4vw, 64px);
+    color: #FFC800; 
+    line-height: 1;
+}
+
+.stat-label { 
+    font-size: 12px; 
+    color: rgba(255,255,255,.55); 
+    margin-top: 2px; 
+}
+
+/* ── TICKER ── */
+.ticker {
+    background: #FFC800;
+    padding: 11px 0;
+    overflow: hidden; 
+    white-space: nowrap;
+}
+
+.ticker-track {
+    display: inline-flex; 
+    gap: 40px;
+    animation: tick 24s linear infinite;
+}
+
+.ticker-track img {
+    height: auto;
+    max-height: 20px;   
+    max-width: 130px;   
+    object-fit: contain; 
+    display: block;
+    flex-shrink: 0;
+    filter: grayscale(0) opacity(1);
+    transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+.ticker-track span { 
+    font-size: 13px; 
+    font-weight: 600; 
+    color: #061929; 
+}
+
+.ticker-track .dot { 
+    opacity: .35; 
+}
+
+@keyframes tick { 
+    0% { transform: translateX(0); } 
+    100% { transform: translateX(-50%); } 
+}
+
+/* ── SECTION HELPERS ── */
+.section { 
+    padding: 72px 40px; 
+}
+
+.section-tag {
+    font-size: 11px; 
+    font-weight: 600; 
+    letter-spacing: .13em;
+    color: rgba(0,0,0,.4); 
+    margin-bottom: 10px;
+}
+
+.section-tag-light { 
+    color: rgba(255,255,255,.4); 
+}
+
+.section-title {
+    font-family: 'Crimson Text', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 600; 
+    line-height: 1.1;
+    margin-bottom: 36px;
+}
+
+
+/* ── CONNECTING / ABOUT ── */
+.connecting {
+    background: #061929;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.connecting-img {
+    padding: 20px;
+    background: #061929;
+    min-height: 400px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.connecting-text { 
+    padding: 70px 56px; 
+}
+
+.connecting-text-company { 
+    padding-top: 0px; 
+    padding-bottom: 10px; 
+    color: rgba(0,0,0,.4); 
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.connecting-text .section-title { 
+    color: #fff; 
+}
+
+.connecting-text p { 
+    font-size: 14px; 
+    line-height: 1.85; 
+    color: #848C93; 
+    margin-bottom: 32px; 
+}
+
+/* ── RESOURCES ── */
+.resources {
+    background: #FCF7F3;
+    padding: 60px 20px;
+}
+
+.resources .section-tag {
+    text-align: center;
+    width: 100%;
+    color: rgba(4, 25, 42, 0.6);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.resources .section-title {
+    text-align: center;
+    width: 100%;
+    color: #04192A;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+.res-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.res-card {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.res-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(4, 25, 42, 0.05);
+}
+
+.res-image {
+    width: 100%;
+    height: 160px;
+    background: #F0EBE3;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.res-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.res-icon {
+    width: 48px;
+    height: 48px;
+    background: #F0EBE3;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.res-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.res-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: #04192A;
+    fill: none;
+    stroke-width: 1.6;
+}
+
+.res-body {
+    padding: 22px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.res-card h3,
+.company-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #04192A;
+    line-height: 1.4;
+}
+
+.res-card p,
+.company-card p {
+    font-size: 13px;
+    color: rgba(0,0,0,.5);
+    line-height: 1.75;
+}
+
+/* ── COMPANY GRID & CARDS ── */
+.company-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 24px;
+    text-align: left;
+}
+
+.company-card {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 20px;
+    padding: 28px 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.company-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(4, 25, 42, 0.05);
+}
+
+/* ── TIMELINE ── */
+
+.timeline-section {
+  background: #FAF8F6;
+}
+
+.timeline-section .section-title,
+.timeline-section .section-tag {
+  text-align: center;
+  width: 100%;
+  color: #04192A;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 60px auto 0;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background: rgba(255, 200, 0, 0.2);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 0 38px;
+  margin-bottom: -8px;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 14px;
+  height: 14px;
+  background: #FFC800;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-item.left::before {
+  right: -7px;
+}
+
+.timeline-item.right::before {
+  left: -7px;
+}
+
+.timeline-content {
+  background: #fff;
+  border-radius: 22px;
+  padding: 22px 26px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 4px 16px rgba(0,0,0,.05);
+  transition: 0.25s ease;
+}
+
+.timeline-item.current .timeline-content {
+  border: 2px solid #FFC800;
+  background: #FFF9E8;
+}
+
+.timeline-item.upcoming .timeline-content {
+  border: 2px solid rgba(255,200,0,.35);
+  background: #FFFDF7;
+}
+
+/* glowing active connector */
+.timeline-item.current::after,
+.timeline-item.upcoming::after {
+  content: "";
+  position: absolute;
+  top: 36px;
+  height: 3px;
+  background: #FFC800;
+  z-index: 1;
+}
+/* left cards */
+.timeline-item.left.current::after,
+.timeline-item.left.upcoming::after {
+  right: 0;
+  width: 38px;
+}
+/* right cards */
+.timeline-item.right.current::after,
+.timeline-item.right.upcoming::after {
+  left: 0;
+  width: 38px;
+}
+
+.tl-date {
+  font-size: 16px;
+  font-weight: 700;
+  color: #04192A;
+  margin-bottom: 8px;
+}
+
+.tl-date-note {
+  font-size: 11px;
+  color: rgba(0,0,0,.4);
+  margin-bottom: 6px;
+}
+
+.tl-event {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(0,0,0,.58);
+}
+
+@media (max-width: 900px) {
+
+  .timeline::before {
+    left: 24px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 70px;
+    padding-right: 20px;
+    margin-bottom: 18px;
+  }
+
+  .timeline-item::before {
+    left: 17px !important;
+  }
+
+}
+
+/* ── ATTENDEES ── */
+.attendees {
+    text-align: center;
+    width: 100%;
+    background: #FAF8F6;
+    color: #04192A;
+    padding: 72px 40px;
+}
+
+.attendees .section-title {
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+    color: #04192A;
+}
+
+.attendees .section-tag {
+    color: rgba(4, 25, 42, 0.5);
+}
+
+.companies-header p {
+    color: rgba(4, 25, 42, 0.7);
+    max-width: 650px;
+    margin: 0 auto 20px;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* company search controls row */
+.attendees .nav-right {
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* filter select wrappers */
+#time-filter-wrap {
+    max-width: 180px;
+    flex: 1;
+    position: relative;
+}
+
+#job-type-filter-wrap {
+    max-width: 200px;
+    flex: 1;
+    position: relative;
+}
+
+/* filter selects */
+#time-filter,
+#job-type-filter {
+    width: 100%;
+    background: rgba(4, 25, 42, 0.05);
+    border: 1px solid rgba(4, 25, 42, 0.15);
+    border-radius: 30px;
+    padding: 10px 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: #04192A;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+}
+
+#time-filter option,
+#job-type-filter option {
+    background: #ffffff;
+    color: #04192A;
+}
+
+#time-filter option:first-child,
+#job-type-filter option:first-child {
+    background: #FAF8F6;
+}
+
+/* company count label */
+#company-count {
+    text-align: center;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    color: rgba(4, 25, 42, 0.6);
+    font-weight: 600;
+}
+
+/* load more button wrapper */
+#sticky-btn-wrapper {
+    position: static;
+    z-index: 100;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+/* load more button — light-bg variant of .btn-ghost */
+#load-more-btn {
+    color: #04192A;
+    background: #FAF8F6;
+    border: 2px solid rgba(4, 25, 42, 0.35);
+    min-width: 200px;
+    box-shadow: none;
+    transition: all 0.2s ease;
+}
+
+.attendees-logos {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 16px;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0,0,0,.2);
+    font-size: 13px;
+    letter-spacing: .05em;
+}
+
+.thankyou {
+    text-align: center;
+    padding: 32px 40px;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(4, 25, 42, 0.5);
+}
+
+/* ── FOOTER ── */
+footer {
+    background: #000;
+    padding: 36px 40px 24px;
+    color: #fff;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 28px;
+}
+
+.footer-brand-logo {
+    width: 54px;
+    height: 54px;
+    background: #FFC800;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #061929;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    line-height: 1.75;
+    color: rgba(255,255,255,.4);
+    margin-bottom: 16px;
+}
+
+.footer-contact a {
+    display: block;
+    font-size: 12px;
+    color: rgba(255,255,255,.5);
+    margin-bottom: 5px;
+}
+.footer-contact img {
+    margin-top: 20px;
+}
+
+
+.footer-contact a:hover {
+    color: #FFC800;
+}
+
+.footer-col-head {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #FFC800;
+    display: inline-block;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-links a {
+    font-size: 12px;
+    color: rgba(255,255,255,.55);
+}
+
+.footer-links a:hover {
+    color: rgba(255,255,255,.9);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 11px;
+    color: rgba(255,255,255,.3);
+}
+
+/* ── RESPONSIVE ── */
+@media (min-width: 768px) {
+    .res-grid,
+    .company-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .nav { padding: 0 20px; }
+    .nav-search { display: none; }
+    .hero { padding: 48px 20px 0; }
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    .connecting { grid-template-columns: 1fr; }
+    .section { padding: 48px 20px; }
+    .res-grid,
+    .company-grid { grid-template-columns: 1fr; }
+    .tl-wrap { grid-template-columns: 1fr; }
+    .tl-col-left, .tl-col-right {
+        grid-column: 1;
+        padding: 0;
+        align-items: flex-start;
+    }
+    .tl-line { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid > div:first-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 768px) {
+    .search-input {
+        width: 0;
+        padding: 0;
+        border-color: transparent;
+        background: transparent;
+        pointer-events: none;
+    }
+
+    .search-container {
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    .search-icon-btn {
+        position: static;
+        padding: 10px;
+        border-radius: 50%;
+        transition: background-color 0.2s ease;
+    }
+
+    .search-icon-btn:hover {
+        background-color: rgba(4, 25, 42, 0.05);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title { font-size: 44px; }
+    .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* ── MAPS PAGE ── */
+/* maps.css
+   Page-specific styles for maps_fall engineering career fair.html
+   Shared base styles live in homestyle.css.
+*/
+
+/* ── HERO ── */
+.maps-hero {
+  background-image: url('https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/img/homepage_image.png') !important;
+  background-size: cover !important;
+  background-position: center top !important;
+  min-height: 520px !important;
+  padding: 80px 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.maps-hero .hero-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  grid-template-columns: unset !important;
+  max-width: 700px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.maps-hero .hero-title {
+  font-size: clamp(48px, 7vw, 80px) !important;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.maps-hero .hero-sub {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 560px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.maps-hero .hero-pills {
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.maps-hero .hero-btns {
+  justify-content: center;
+}
+
+/* ── SHARED HELPERS ── */
+.btn-ghost-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 30px;
+  padding: 11px 26px;
+  font-size: 14px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-ghost-light:hover {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.section-tag-yellow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  color: #FFC800;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.section-sub {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(4, 25, 42, 0.58);
+  max-width: 660px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+/* ── FLOOR MAP GALLERY SECTION ── */
+.maps-floor-section {
+  background: #FAF8F6;
+  color: #04192A;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.maps-floor-section .section-tag {
+  color: rgba(4, 25, 42, 0.5);
+  letter-spacing: 0.13em;
+  font-weight: 700;
+}
+
+.maps-floor-section .section-title {
+  color: #04192A;
+  font-size: 36px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* ── GALLERY GRID ── */
+.maps-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── THUMBNAIL CARD ── */
+.map-thumb {
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(4, 25, 42, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  aspect-ratio: 3 / 4;
+}
+
+.map-thumb:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px rgba(4, 25, 42, 0.1);
+  border-color: #FFC800;
+}
+
+.map-thumb:focus-visible {
+  outline: 3px solid #FFC800;
+  outline-offset: 2px;
+}
+
+.map-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.map-thumb:hover img {
+  transform: scale(1.03);
+}
+
+.map-thumb-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(4, 25, 42, 0.85) 0%, transparent 100%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 28px 16px 14px;
+  text-transform: uppercase;
+}
+
+.map-thumb-zoom {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: #FFC800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.map-thumb:hover .map-thumb-zoom {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.map-thumb-zoom svg {
+  width: 16px;
+  height: 16px;
+  stroke: #04192A;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* ── LIGHTBOX ── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: rgba(4, 6, 25, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 90vh;
+  max-width: calc(100vw - 160px);
+}
+
+.lightbox-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.lightbox-img {
+  max-height: calc(90vh - 60px);
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  z-index: 9001;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-close svg {
+  width: 18px;
+  height: 18px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+}
+
+.lightbox-nav {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.lightbox-nav:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.lightbox-nav:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.lightbox-nav svg {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* ── VENUE SECTION ── */
+.maps-venue-section {
+  background: #061929;
+  color: #fff;
+}
+
+.venue-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 460px;
+}
+
+.venue-map {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  display: block;
+  text-decoration: none;
+}
+
+.venue-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: none;
+  display: block;
+  pointer-events: none;
+}
+
+.venue-map-overlay {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: #FFC800;
+  color: #04192A;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 8px 14px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.venue-map-overlay svg {
+  width: 14px;
+  height: 14px;
+  stroke: #04192A;
+  fill: none;
+  stroke-width: 2;
+}
+
+.venue-info {
+  padding: 70px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.venue-name {
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.venue-address {
+  font-size: 14px;
+  color: #848C93;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.venue-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.venue-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 13px;
+}
+
+.venue-detail-item svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  stroke: #FFC800;
+  fill: none;
+  stroke-width: 1.8;
+  width: 18px;
+  height: 18px;
+}
+
+.venue-detail-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.venue-detail-val {
+  color: #FAF8F6;
+  line-height: 1.5;
+}
+
+/* ── GETTING THERE ── */
+.getting-there-section {
+  background: #061929;
+  color: #fff;
+  padding: 80px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.getting-there-section .section-tag {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.getting-there-section .section-title {
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.getting-there-section .section-sub {
+  color: #848C93;
+}
+
+.transport-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.transport-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  padding: 32px 24px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.transport-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 200, 0, 0.3);
+}
+
+.transport-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 200, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.transport-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: #FFC800;
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.transport-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.transport-desc {
+  font-size: 13px;
+  color: #848C93;
+  line-height: 1.75;
+}
+
+.transport-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #FFC800;
+  margin-top: 14px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.transport-link:hover {
+  opacity: 0.8;
+}
+
+.transport-link svg {
+  width: 12px;
+  height: 12px;
+  stroke: #FFC800;
+  fill: none;
+  stroke-width: 2.5;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .transport-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .maps-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .venue-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .venue-info {
+    padding: 48px 24px;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .venue-map {
+    min-height: 300px;
+  }
+
+  .venue-map iframe {
+    min-height: 300px;
+  }
+
+  .maps-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .getting-there-section,
+  .maps-floor-section {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .maps-hero {
+    padding: 60px 20px !important;
+  }
+
+  .transport-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .maps-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .lightbox-content {
+    max-width: calc(100vw - 80px);
+  }
+
+  .lightbox-nav {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/homepage.html" class="nav-logo">
+    <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/img/CF26Logo.png" alt="Career Fair 2026 Logo">
+  </a>
+  <div class="nav-links">
+    <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/homepage.html" class="nav-link">Home</a>
+    <div class="nav-dropdown">
+      <a href="#" class="nav-link nav-dropdown-trigger">Students</a>
+      <div class="nav-dropdown-menu">
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/student-guide.html">Student Guide</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/career-fair-plus.html">Career Fair Plus App</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/egl-coat-check.html">EGL Coat Check</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/volunteer.html">Volunteer</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <a href="#" class="nav-link nav-dropdown-trigger">Employers</a>
+      <div class="nav-dropdown-menu">
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/employer-faq.html">Employer FAQ</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/receptions.html">Receptions</a>
+      </div>
+    </div>
+    <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/maps_fall%20engineering%20career%20fair.html" class="nav-link">Maps</a>
+    <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/about-us.html" class="nav-link">About</a>
+  </div>
+  <div class="nav-search">
+    <div class="search-container">
+      <input type="search" class="search-input" placeholder="Search companies..." aria-label="Search companies">
+      <button class="search-icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-right">
+    <button class="btn btn-yellow">REGISTER</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero maps-hero" aria-labelledby="maps-heading">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <h1 class="hero-title" id="maps-heading">Career Fair Maps</h1>
+    <p class="hero-sub">
+      Navigate the Fall Engineering Career Fair with ease. Browse venue floor plans,
+      locate employer booths, and find parking and transit options.
+    </p>
+    <div class="hero-pills" role="list" aria-label="Event details">
+      <span class="pill" role="listitem">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Sep 15–16, 2026
+      </span>
+      <span class="pill" role="listitem">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        North Campus
+      </span>
+      <span class="pill" role="listitem">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        10:00 AM – 4:00 PM
+      </span>
+    </div>
+    <div class="hero-btns">
+      <a href="#floor-maps" class="btn btn-yellow-lg">View Floor Plans →</a>
+      <a
+        href="https://maps.google.com/?q=Chrysler+Center,2121+Bonisteel+Blvd,Ann+Arbor,MI+48109"
+        target="_blank"
+        rel="noopener"
+        class="btn-ghost-light"
+      >
+        Get Directions
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FLOOR MAP GALLERY -->
+<section class="maps-floor-section" id="floor-maps" aria-labelledby="floor-heading">
+  <p class="section-tag">VENUE LAYOUT</p>
+  <h2 class="section-title" id="floor-heading">Fair Floor Plans</h2>
+  <p class="section-sub">
+    Click any map to view it full size. These floor plans show employer booth locations,
+    check-in areas, and building navigation for both days of the fair.
+  </p>
+
+  <div class="maps-gallery" role="list" aria-label="Career fair floor plan pages">
+
+    <button
+      class="map-thumb"
+      role="listitem"
+      aria-label="Floor plan page 1 — click to enlarge"
+      data-src="https://static.wixstatic.com/media/bab3e1_78de6aed2ff44ed9a74b7c72676c90f9~mv2.jpg/v1/fit/w_1280,h_1656,q_90,enc_avif,quality_auto/bab3e1_78de6aed2ff44ed9a74b7c72676c90f9~mv2.jpg"
+      data-label="Map — Page 1"
+    >
+      <img
+        src="https://static.wixstatic.com/media/bab3e1_78de6aed2ff44ed9a74b7c72676c90f9~mv2.jpg/v1/fill/w_400,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bab3e1_78de6aed2ff44ed9a74b7c72676c90f9~mv2.jpg"
+        alt="Career Fair Floor Plan — Page 1"
+        loading="lazy"
+      >
+      <div class="map-thumb-label" aria-hidden="true">Page 1</div>
+      <div class="map-thumb-zoom" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </div>
+    </button>
+
+    <button
+      class="map-thumb"
+      role="listitem"
+      aria-label="Floor plan page 2 — click to enlarge"
+      data-src="https://static.wixstatic.com/media/bab3e1_836bbd0bb9d34af49b04771b5b645bd9~mv2.jpg/v1/fit/w_1280,h_1656,q_90,enc_avif,quality_auto/bab3e1_836bbd0bb9d34af49b04771b5b645bd9~mv2.jpg"
+      data-label="Map — Page 2"
+    >
+      <img
+        src="https://static.wixstatic.com/media/bab3e1_836bbd0bb9d34af49b04771b5b645bd9~mv2.jpg/v1/fill/w_400,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bab3e1_836bbd0bb9d34af49b04771b5b645bd9~mv2.jpg"
+        alt="Career Fair Floor Plan — Page 2"
+        loading="lazy"
+      >
+      <div class="map-thumb-label" aria-hidden="true">Page 2</div>
+      <div class="map-thumb-zoom" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </div>
+    </button>
+
+    <button
+      class="map-thumb"
+      role="listitem"
+      aria-label="Floor plan page 3 — click to enlarge"
+      data-src="https://static.wixstatic.com/media/bab3e1_c8083a4bfc4c4c449139a8938ab0a3b2~mv2.jpg/v1/fit/w_1280,h_1656,q_90,enc_avif,quality_auto/bab3e1_c8083a4bfc4c4c449139a8938ab0a3b2~mv2.jpg"
+      data-label="Map — Page 3"
+    >
+      <img
+        src="https://static.wixstatic.com/media/bab3e1_c8083a4bfc4c4c449139a8938ab0a3b2~mv2.jpg/v1/fill/w_400,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bab3e1_c8083a4bfc4c4c449139a8938ab0a3b2~mv2.jpg"
+        alt="Career Fair Floor Plan — Page 3"
+        loading="lazy"
+      >
+      <div class="map-thumb-label" aria-hidden="true">Page 3</div>
+      <div class="map-thumb-zoom" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </div>
+    </button>
+
+    <button
+      class="map-thumb"
+      role="listitem"
+      aria-label="Floor plan page 4 — click to enlarge"
+      data-src="https://static.wixstatic.com/media/bab3e1_9682a2ab1ebe4c4b8edbfff27529e29d~mv2.jpg/v1/fit/w_1280,h_1656,q_90,enc_avif,quality_auto/bab3e1_9682a2ab1ebe4c4b8edbfff27529e29d~mv2.jpg"
+      data-label="Map — Page 4"
+    >
+      <img
+        src="https://static.wixstatic.com/media/bab3e1_9682a2ab1ebe4c4b8edbfff27529e29d~mv2.jpg/v1/fill/w_400,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bab3e1_9682a2ab1ebe4c4b8edbfff27529e29d~mv2.jpg"
+        alt="Career Fair Floor Plan — Page 4"
+        loading="lazy"
+      >
+      <div class="map-thumb-label" aria-hidden="true">Page 4</div>
+      <div class="map-thumb-zoom" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </div>
+    </button>
+
+    <button
+      class="map-thumb"
+      role="listitem"
+      aria-label="Floor plan page 5 — click to enlarge"
+      data-src="https://static.wixstatic.com/media/bab3e1_bda8e5be85e24a2bbe32aa8577fd864c~mv2.jpg/v1/fit/w_1280,h_1656,q_90,enc_avif,quality_auto/bab3e1_bda8e5be85e24a2bbe32aa8577fd864c~mv2.jpg"
+      data-label="Map — Page 5"
+    >
+      <img
+        src="https://static.wixstatic.com/media/bab3e1_bda8e5be85e24a2bbe32aa8577fd864c~mv2.jpg/v1/fill/w_400,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bab3e1_bda8e5be85e24a2bbe32aa8577fd864c~mv2.jpg"
+        alt="Career Fair Floor Plan — Page 5"
+        loading="lazy"
+      >
+      <div class="map-thumb-label" aria-hidden="true">Page 5</div>
+      <div class="map-thumb-zoom" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </div>
+    </button>
+
+    <button
+      class="map-thumb"
+      role="listitem"
+      aria-label="Floor plan page 6 — click to enlarge"
+      data-src="https://static.wixstatic.com/media/bab3e1_5522a98221b04b838f33c632b75a7a8d~mv2.jpg/v1/fit/w_1280,h_1656,q_90,enc_avif,quality_auto/bab3e1_5522a98221b04b838f33c632b75a7a8d~mv2.jpg"
+      data-label="Map — Page 6"
+    >
+      <img
+        src="https://static.wixstatic.com/media/bab3e1_5522a98221b04b838f33c632b75a7a8d~mv2.jpg/v1/fill/w_400,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bab3e1_5522a98221b04b838f33c632b75a7a8d~mv2.jpg"
+        alt="Career Fair Floor Plan — Page 6"
+        loading="lazy"
+      >
+      <div class="map-thumb-label" aria-hidden="true">Page 6</div>
+      <div class="map-thumb-zoom" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </div>
+    </button>
+
+    <button
+      class="map-thumb"
+      role="listitem"
+      aria-label="Floor plan page 7 — click to enlarge"
+      data-src="https://static.wixstatic.com/media/bab3e1_834a486f396c42d2bd1877370c50c52f~mv2.jpg/v1/fit/w_1280,h_1656,q_90,enc_avif,quality_auto/bab3e1_834a486f396c42d2bd1877370c50c52f~mv2.jpg"
+      data-label="Map — Page 7"
+    >
+      <img
+        src="https://static.wixstatic.com/media/bab3e1_834a486f396c42d2bd1877370c50c52f~mv2.jpg/v1/fill/w_400,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bab3e1_834a486f396c42d2bd1877370c50c52f~mv2.jpg"
+        alt="Career Fair Floor Plan — Page 7"
+        loading="lazy"
+      >
+      <div class="map-thumb-label" aria-hidden="true">Page 7</div>
+      <div class="map-thumb-zoom" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </div>
+    </button>
+
+    <button
+      class="map-thumb"
+      role="listitem"
+      aria-label="Floor plan page 8 — click to enlarge"
+      data-src="https://static.wixstatic.com/media/bab3e1_6bcc65981c8743b4bdc7fdacfa551d00~mv2.jpg/v1/fit/w_1280,h_1656,q_90,enc_avif,quality_auto/bab3e1_6bcc65981c8743b4bdc7fdacfa551d00~mv2.jpg"
+      data-label="Map — Page 8"
+    >
+      <img
+        src="https://static.wixstatic.com/media/bab3e1_6bcc65981c8743b4bdc7fdacfa551d00~mv2.jpg/v1/fill/w_400,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bab3e1_6bcc65981c8743b4bdc7fdacfa551d00~mv2.jpg"
+        alt="Career Fair Floor Plan — Page 8"
+        loading="lazy"
+      >
+      <div class="map-thumb-label" aria-hidden="true">Page 8</div>
+      <div class="map-thumb-zoom" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </div>
+    </button>
+
+    <button
+      class="map-thumb"
+      role="listitem"
+      aria-label="Floor plan page 9 — click to enlarge"
+      data-src="https://static.wixstatic.com/media/bab3e1_82a9cce45fe64a20a9190a65c8b68c52~mv2.jpg/v1/fit/w_1280,h_1656,q_90,enc_avif,quality_auto/bab3e1_82a9cce45fe64a20a9190a65c8b68c52~mv2.jpg"
+      data-label="Map — Page 9"
+    >
+      <img
+        src="https://static.wixstatic.com/media/bab3e1_82a9cce45fe64a20a9190a65c8b68c52~mv2.jpg/v1/fill/w_400,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bab3e1_82a9cce45fe64a20a9190a65c8b68c52~mv2.jpg"
+        alt="Career Fair Floor Plan — Page 9"
+        loading="lazy"
+      >
+      <div class="map-thumb-label" aria-hidden="true">Page 9</div>
+      <div class="map-thumb-zoom" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </div>
+    </button>
+
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Floor plan viewer" hidden>
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous map">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <div class="lightbox-content">
+    <div class="lightbox-label" id="lightbox-label"></div>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Career fair floor plan — full size">
+  </div>
+  <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next map">
+    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+</div>
+
+<!-- VENUE LOCATION -->
+<section class="maps-venue-section" aria-labelledby="venue-heading">
+  <div class="venue-grid">
+
+    <a
+      href="https://maps.google.com/?q=Chrysler+Center,2121+Bonisteel+Blvd,Ann+Arbor,MI+48109"
+      target="_blank"
+      rel="noopener"
+      class="venue-map"
+      aria-label="Open Chrysler Center in Google Maps"
+    >
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.5!2d-83.71640!3d42.29280!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cae95b1e0a0e5%3A0x8aaf0e3a4e2c1d00!2sChrysler+Center!5e0!3m2!1sen!2sus!4v1"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        tabindex="-1"
+        aria-hidden="true"
+        title="Map showing Chrysler Center on North Campus"
+      ></iframe>
+      <div class="venue-map-overlay" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Open in Google Maps
+      </div>
+    </a>
+
+    <div class="venue-info">
+      <p class="section-tag section-tag-yellow">VENUE</p>
+      <h2 class="venue-name" id="venue-heading">Chrysler Center</h2>
+      <p class="venue-address">2121 Bonisteel Blvd, Ann Arbor, MI 48109 — North Campus</p>
+
+      <div class="venue-detail-list">
+        <div class="venue-detail-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <div>
+            <div class="venue-detail-label">Dates</div>
+            <div class="venue-detail-val">Monday–Tuesday, September 15–16, 2026</div>
+          </div>
+        </div>
+        <div class="venue-detail-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div>
+            <div class="venue-detail-label">Hours</div>
+            <div class="venue-detail-val">10:00 AM – 4:00 PM both days</div>
+          </div>
+        </div>
+        <div class="venue-detail-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <div class="venue-detail-label">Location</div>
+            <div class="venue-detail-val">North Campus, University of Michigan</div>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="https://maps.google.com/?q=Chrysler+Center,2121+Bonisteel+Blvd,Ann+Arbor,MI+48109"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-yellow-lg"
+        style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;width:fit-content;"
+      >
+        Get Directions →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- GETTING THERE -->
+<section class="getting-there-section" aria-labelledby="transport-heading">
+  <p class="section-tag">TRANSPORTATION</p>
+  <h2 class="section-title" id="transport-heading">Getting There</h2>
+  <p class="section-sub">
+    North Campus is easily accessible by bus, bike, car, or on foot.
+    We recommend taking the campus bus to avoid parking constraints on fair days.
+  </p>
+
+  <div class="transport-grid">
+
+    <div class="transport-card">
+      <div class="transport-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M3 11L12 2l9 9"/><line x1="9" y1="22" x2="9" y2="17"/><line x1="15" y1="22" x2="15" y2="17"/></svg>
+      </div>
+      <div class="transport-title">Campus Bus</div>
+      <p class="transport-desc">
+        The Northwood/Bursley-Baits routes connect Central Campus to North Campus every 5–15 minutes. Drop off near Chrysler Center. Free with M-Card.
+      </p>
+      <a href="https://ltp.umich.edu/campus-transit/routes-and-schedules/" target="_blank" rel="noopener" class="transport-link">
+        View routes
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+
+    <div class="transport-card">
+      <div class="transport-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+      </div>
+      <div class="transport-title">Parking</div>
+      <p class="transport-desc">
+        NC5 Surface Lot and the Bonisteel parking structure are closest to Chrysler Center. Visitor permits available at lot kiosks.
+      </p>
+      <a href="https://ltp.umich.edu/parking/visitor-parking/" target="_blank" rel="noopener" class="transport-link">
+        Visitor parking info
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+
+    <div class="transport-card">
+      <div class="transport-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M12 7v8"/><path d="M7 14l5 6 5-6"/><path d="M7 9l5 2 5-2"/></svg>
+      </div>
+      <div class="transport-title">Walking &amp; Biking</div>
+      <p class="transport-desc">
+        About a 25-minute walk from Central Campus via Fuller Rd. Bike racks available outside Chrysler Center and Pierpont Commons.
+      </p>
+      <a href="https://maps.google.com/?q=Chrysler+Center,Ann+Arbor" target="_blank" rel="noopener" class="transport-link">
+        Walking directions
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+
+    <div class="transport-card">
+      <div class="transport-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      </div>
+      <div class="transport-title">Rideshare</div>
+      <p class="transport-desc">
+        Uber and Lyft drop-off on Bonisteel Blvd in front of Chrysler Center. Plan for heavier traffic between 9–10:30 AM on fair days.
+      </p>
+      <a href="https://maps.google.com/?q=Chrysler+Center,2121+Bonisteel+Blvd,Ann+Arbor,MI" target="_blank" rel="noopener" class="transport-link">
+        Share location
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/homepage.html" class="nav-logo" aria-label="Fall Engineering Career Fair Home">
+        <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/img/CF26Logo.png" alt="Career Fair 2026 Logo">
+      </a>
+      <div class="footer-contact">
+        <a href="https://www.sweumich.org/" target="_blank" rel="noopener">
+          <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/swe_white_trans.png" alt="SWE at Michigan" width="100">
+        </a>
+        <a href="mailto:swe.eboard@umich.edu">
+          <img src="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/logos/tbp_white_trans.png" alt="Tau Beta Pi" width="130">
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-head">Students</div>
+      <nav class="footer-links">
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/student-guide.html">Student Guide</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/career-fair-plus.html">Career Fair Plus App</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/egl-coat-check.html">EGL Coat Check</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/volunteer.html">Volunteer</a>
+      </nav>
+    </div>
+    <div>
+      <div class="footer-col-head">Employers</div>
+      <nav class="footer-links">
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/employer-faq.html">Employer FAQ</a>
+        <a href="https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/receptions.html">Employer Receptions</a>
+        <a href="mailto:eng-careerfair@umich.edu">Contact ECRC</a>
+      </nav>
+    </div>
+    <div>
+      <div class="footer-col-head">Contact</div>
+      <nav class="footer-links">
+        <a href="mailto:eng-careerfair@umich.edu">eng-careerfair@umich.edu</a>
+        <a href="https://www.sweumich.org/" target="_blank" rel="noopener">SWE at Michigan</a>
+        <a href="mailto:swe.eboard@umich.edu">swe.eboard@umich.edu</a>
+      </nav>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Society of Women Engineers &amp; Tau Beta Pi — University of Michigan</span>
+    <span>Fall Engineering Career Fair</span>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const thumbs   = Array.from(document.querySelectorAll(".map-thumb"));
+  const lightbox = document.getElementById("lightbox");
+  const lbImg    = document.getElementById("lightbox-img");
+  const lbLabel  = document.getElementById("lightbox-label");
+  const lbClose  = document.getElementById("lightbox-close");
+  const lbPrev   = document.getElementById("lightbox-prev");
+  const lbNext   = document.getElementById("lightbox-next");
+
+  if (!lightbox || !thumbs.length) return;
+
+  let current = 0;
+
+  function openLightbox(index) {
+    current = index;
+    lbImg.src = thumbs[current].dataset.src;
+    lbLabel.textContent = thumbs[current].dataset.label;
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+    lbClose.focus();
+    updateNavBtns();
+  }
+
+  function closeLightbox() {
+    lightbox.hidden = true;
+    document.body.style.overflow = "";
+    thumbs[current].focus();
+  }
+
+  function updateNavBtns() {
+    lbPrev.disabled = current === 0;
+    lbNext.disabled = current === thumbs.length - 1;
+  }
+
+  thumbs.forEach((thumb, i) => thumb.addEventListener("click", () => openLightbox(i)));
+  lbClose.addEventListener("click", closeLightbox);
+  lbPrev.addEventListener("click", () => { if (current > 0) openLightbox(current - 1); });
+  lbNext.addEventListener("click", () => { if (current < thumbs.length - 1) openLightbox(current + 1); });
+  lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+
+  document.addEventListener("keydown", (e) => {
+    if (lightbox.hidden) return;
+    if (e.key === "Escape")     closeLightbox();
+    if (e.key === "ArrowLeft")  { if (current > 0) openLightbox(current - 1); }
+    if (e.key === "ArrowRight") { if (current < thumbs.length - 1) openLightbox(current + 1); }
+  });
+});
+</script>
+</body>
+</html>
