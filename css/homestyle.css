@@ -274,7 +274,7 @@ img {
 /* ── HERO ── */
 .hero {
     position: relative;
-    background-image: url('/img/homepage_image.png');
+    background-image: url('../img/homepage_image.png');
     padding: 64px 40px 0;
     overflow: hidden;
     min-height: 520px;
