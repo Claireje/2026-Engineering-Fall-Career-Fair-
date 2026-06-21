@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const cardHTML = `
         <article class="company-card">
           <div class="res-icon" style="background: #ffffff;">
-            <img src="${company.logo}" alt="${company.name}">
+            <img src="${company.logo.startsWith('http') ? company.logo : 'https://claireje.github.io/2026-Engineering-Fall-Career-Fair-/' + company.logo.replace(/^\//, '')}" alt="${company.name}">
           </div>
 
           <h3>${company.name}</h3>
