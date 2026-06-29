@@ -291,6 +291,16 @@
   box-shadow: 0 12px 24px rgba(4, 25, 42, 0.08);
 }
 
+.connect-org-logo {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+
+.connect-org-logo-tbp {
+  height: 44px;
+}
+
 .connect-card-head {
   display: flex;
   align-items: center;
