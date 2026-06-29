@@ -2,7 +2,7 @@
 
 /* ── HERO ── */
 .sg-hero {
-  background: #061929 !important;
+  background-image: url('../img/student_guide.JPG') !important;
   min-height: 440px !important;
   display: flex !important;
   align-items: center !important;
