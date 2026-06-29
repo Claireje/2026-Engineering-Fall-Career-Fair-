@@ -1,6 +1,6 @@
 # Fall Engineering Career Fair 2026
 
-Website for the UMich Fall Engineering Career Fair (Sep 15–16, 2026). We migrated off Wix and rebuilt everything from scratch.
+Website for the UMich Fall Engineering Career Fair (Sep 14–15, 2026). We migrated off Wix and rebuilt everything from scratch.
 
 ## Running it
 

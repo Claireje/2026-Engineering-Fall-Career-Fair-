@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "August 25th": new Date(currentYear, 7, 25),
       "September 13th": new Date(currentYear, 8, 13),
       "September 14th": new Date(currentYear, 8, 14),
-      "September 15–16th": new Date(currentYear, 8, 15)
+      "September 14–15th": new Date(currentYear, 8, 15)
     };
 
     let closestItem = null;
