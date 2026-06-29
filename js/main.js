@@ -246,6 +246,56 @@ document.addEventListener("DOMContentLoaded", () => {
         hamburger.setAttribute('aria-expanded', 'false');
       }
     });
+
+    // ── NAV SEARCH ──
+    const SEARCH_INDEX = [
+      { title: 'Student Guide', url: 'student-guide.html', desc: 'Prepare for the fair — resume tips, attire, and more' },
+      { title: 'Career Fair Plus App', url: 'career-fair-plus.html', desc: 'Navigate the fair with the official mobile app' },
+      { title: 'Volunteer', url: 'volunteer.html', desc: 'Volunteer opportunities at the fair' },
+      { title: 'Employer FAQ', url: 'employer-faq.html', desc: 'FAQs for employers — booths, registration, logistics' },
+      { title: 'Receptions', url: 'receptions.html', desc: 'Pre-fair networking receptions Sep 12–13' },
+      { title: 'Maps', url: 'maps_fall engineering career fair.html', desc: 'Venue floor plans, campus map, and parking info' },
+      { title: 'About Us', url: 'about-us.html', desc: 'About SWE, Tau Beta Pi, and the fair history' },
+      { title: 'Event Timeline', url: 'index.html#timeline', desc: 'Key dates — registration, receptions, fair days' },
+      { title: 'Getting There', url: 'maps_fall engineering career fair.html#getting-there', desc: 'Bus, parking, walking, and rideshare directions' },
+      { title: 'Home', url: 'index.html', desc: 'Fall Engineering Career Fair — Sep 14–15, 2026' },
+    ];
+
+    const navSearchInput = document.querySelector('.nav-search .search-input');
+    const navSearchContainer = document.querySelector('.nav-search');
+
+    if (navSearchInput && navSearchContainer) {
+      const resultsEl = document.createElement('div');
+      resultsEl.className = 'nav-search-results';
+      navSearchContainer.appendChild(resultsEl);
+
+      function runSearch(q) {
+        q = q.toLowerCase().trim();
+        if (!q) { resultsEl.classList.remove('is-visible'); return; }
+
+        const hits = SEARCH_INDEX.filter(item =>
+          item.title.toLowerCase().includes(q) || item.desc.toLowerCase().includes(q)
+        ).slice(0, 5);
+
+        resultsEl.innerHTML = hits.length
+          ? hits.map(item => `<a href="${item.url}" class="nav-search-result">
+              <div class="nav-search-result-title">${item.title}</div>
+              <div class="nav-search-result-desc">${item.desc}</div>
+            </a>`).join('')
+          : `<div class="nav-search-no-results">No results for "${q}"</div>`;
+
+        resultsEl.classList.add('is-visible');
+      }
+
+      navSearchInput.addEventListener('input', e => runSearch(e.target.value));
+      navSearchInput.addEventListener('focus', e => { if (e.target.value) runSearch(e.target.value); });
+      navSearchInput.addEventListener('keydown', e => {
+        if (e.key === 'Escape') { resultsEl.classList.remove('is-visible'); navSearchInput.blur(); }
+      });
+      document.addEventListener('click', e => {
+        if (!navSearchContainer.contains(e.target)) resultsEl.classList.remove('is-visible');
+      });
+    }
   });
   loadHTML("footer-container", "footer.html");
   loadCompanies();

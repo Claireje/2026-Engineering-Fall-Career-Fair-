@@ -373,7 +373,7 @@
 .guidelines-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 48px;
   margin-top: 48px;
 }
 
@@ -381,7 +381,7 @@
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 20px;
-  padding: 36px;
+  padding: 48px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -422,7 +422,7 @@
 .guideline-item {
   display: flex;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 36px;
   align-items: flex-start;
 }
 
@@ -485,6 +485,25 @@
   line-height: 1.75;
 }
 
+/* ── PRICING CARD ── */
+.pricing-guidelines-section {
+  padding: 80px 40px;
+}
+
+.pricing-card {
+  background: #fff;
+  border: 1px solid rgba(4, 25, 42, 0.12);
+  border-radius: 24px;
+  padding: 56px 64px;
+  box-shadow: 0 4px 24px rgba(4, 25, 42, 0.07);
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.pricing-card .guidelines-grid {
+  margin-top: 40px;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .location-section {
@@ -505,6 +524,10 @@
   .schedule-section,
   .guidelines-section {
     padding: 60px 20px;
+  }
+
+  .pricing-card {
+    padding: 32px 24px;
   }
 }
 

@@ -116,10 +116,36 @@
 /* ── GALLERY GRID ── */
 .maps-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: 3fr 2fr;
+  gap: 28px;
   max-width: 1100px;
   margin: 0 auto;
+  align-items: start;
+}
+
+/* Page 1 — left column, crops bottom white space */
+.map-thumb-full {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(4, 25, 42, 0.1);
+  background: #fff;
+  position: relative;
+  aspect-ratio: 3 / 3.1;
+}
+
+.map-thumb-full img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+/* Page 2 — right column, full portrait */
+.maps-gallery .map-thumb:last-child {
+  aspect-ratio: 3 / 4;
+  max-width: 100%;
+  margin: 0;
 }
 
 /* ── THUMBNAIL CARD ── */
@@ -529,9 +555,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .maps-gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 @media (max-width: 900px) {
@@ -553,13 +576,13 @@
     min-height: 300px;
   }
 
-  .maps-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .getting-there-section,
   .maps-floor-section {
     padding: 60px 20px;
+  }
+
+  .maps-gallery {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -570,11 +593,6 @@
 
   .transport-grid {
     grid-template-columns: 1fr;
-  }
-
-  .maps-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
   }
 
   .lightbox-content {
