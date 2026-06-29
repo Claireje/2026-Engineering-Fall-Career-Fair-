@@ -1,0 +1,559 @@
+/* receptions.css
+   Page-specific styles for receptions.html.
+   Shared base styles live in homestyle.css.
+*/
+
+/* ── HERO ── */
+.hero {
+  background-image: url('../img/receptions.JPG') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  min-height: 560px !important;
+  padding: 80px 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.hero-bg {
+    position: absolute; 
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, #061929 100%);
+    pointer-events: none;
+}
+
+.hero-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  grid-template-columns: unset !important;
+  max-width: 680px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: clamp(48px, 7vw, 80px) !important;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hero-sub {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 540px;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── BUTTONS ── */
+.btn-ghost-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 30px;
+  padding: 11px 26px;
+  font-size: 14px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn-ghost-light:hover {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* ── SECTION TEXT ── */
+.section-tag-yellow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  color: #FFC800;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.section-sub {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #848C93;
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+/* ── LOCATION ── */
+.location-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 420px;
+  background: #061929;
+}
+
+.location-map {
+  position: relative;
+  overflow: hidden;
+  min-height: 380px;
+}
+
+.location-map img,
+.location-map-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  object-fit: cover;
+  border: none;
+  display: block;
+}
+
+.location-map-iframe {
+  pointer-events: none;
+}
+
+.location-map-overlay {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: #FFC800;
+  color: #04192A;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 8px 14px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.location-map-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  background: #FFC800;
+  color: #04192A;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 6px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.location-map-pin::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #FFC800;
+}
+
+.location-info {
+  background: #061929;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 70px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.location-name {
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.location-address {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #848C93;
+  margin-bottom: 32px;
+}
+
+.rsvp-note {
+  background: rgba(255, 200, 0, 0.08);
+  border: 1px solid rgba(255, 200, 0, 0.2);
+  border-radius: 20px;
+  padding: 18px 22px;
+  font-size: 13px;
+  color: #FAF8F6;
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+.rsvp-note strong {
+  color: #FFC800;
+}
+
+.location-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── SCHEDULE ── */
+.schedule-section {
+  padding: 80px 150px;
+  background: #061929;
+}
+.schedule-section .section-title{
+    text-align: center;
+    width: 100%;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+.schedule-section .section-tag-yellow{
+  text-align: center;
+}
+.schedule-section .section-sub{
+  text-align: center;
+}
+
+.nights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.night-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.night-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 200, 0, 0.3);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.night-card.day1 {
+  border-top: 3px solid #FFC800;
+}
+
+.night-card.day2 {
+  border-top: 3px solid rgba(255, 200, 0, 0.45);
+}
+
+.night-label {
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.night-day {
+  font-family: 'Crimson Text', serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.night-date {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 28px;
+}
+
+.night-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.night-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.night-detail svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  stroke: #FFC800;
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.night-detail-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.night-detail-val {
+  color: #FAF8F6;
+  line-height: 1.6;
+}
+
+/* ── FAIR DAY CALLOUT ── */
+.fair-day-callout {
+  background: #FFC800;
+  color: #04192A;
+  border-radius: 30px;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.fair-day-callout svg {
+  flex-shrink: 0;
+  stroke: #04192A;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* ── GUIDELINES ── */
+.guidelines-section {
+  background: #FAF8F6;
+  color: #04192A;
+  padding: 80px 400px;
+}
+
+.guidelines-section .section-tag {
+    text-align: center;
+    width: 100%;
+    color: rgba(4, 25, 42, 0.6);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.guidelines-section .section-title {
+    text-align: center;
+    width: 100%;
+    color: #04192A;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+.guidelines-section .section-sub {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(4, 25, 42, 0.58);
+  margin-top: 12px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 48px;
+}
+
+.guidelines-col {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.guidelines-col:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(4, 25, 42, 0.05);
+}
+
+.guidelines-col-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #FFC800;
+}
+
+.guidelines-col-head-icon {
+  width: 40px;
+  height: 40px;
+  background: #04192A;
+  color: #FFC800;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.guidelines-col-title {
+  font-family: 'Crimson Text', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #04192A;
+}
+
+.guideline-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 36px;
+  align-items: flex-start;
+}
+
+.guideline-item:last-child {
+  margin-bottom: 0;
+}
+
+.guideline-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guideline-icon svg {
+  fill: none;
+  stroke-width: 2.2;
+  width: 18px;
+  height: 18px;
+}
+
+.guideline-icon.no {
+  background: #FDE8E8;
+}
+
+.guideline-icon.no svg {
+  stroke: #C0392B;
+}
+
+.guideline-icon.yes {
+  background: #E2F5EC;
+}
+
+.guideline-icon.yes svg {
+  stroke: #1A7A3F;
+}
+
+.guideline-icon.info {
+  background: rgba(4, 25, 42, 0.08);
+}
+
+.guideline-icon.info svg {
+  stroke: #04192A;
+}
+
+.guideline-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #04192A;
+  margin-bottom: 4px;
+  letter-spacing: 0.02em;
+}
+
+.guideline-desc {
+  font-size: 13px;
+  color: rgba(4, 25, 42, 0.55);
+  line-height: 1.75;
+}
+
+/* ── PRICING CARD ── */
+.pricing-guidelines-section {
+  padding: 80px 40px;
+}
+
+.pricing-card {
+  background: #fff;
+  border: 1px solid rgba(4, 25, 42, 0.12);
+  border-radius: 24px;
+  padding: 56px 64px;
+  box-shadow: 0 4px 24px rgba(4, 25, 42, 0.07);
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.pricing-card .guidelines-grid {
+  margin-top: 40px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .location-section {
+    grid-template-columns: 1fr;
+  }
+
+  .location-info {
+    padding: 48px 20px;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nights-grid,
+  .guidelines-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-section,
+  .guidelines-section {
+    padding: 60px 20px;
+  }
+
+  .pricing-card {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 60px 20px !important;
+  }
+  .hero-bg {
+    position: absolute; 
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, #061929 100%);
+    pointer-events: none;
+}
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .night-card,
+  .guidelines-col {
+    padding: 24px;
+  }
+
+  .fair-day-callout {
+    border-radius: 20px;
+    align-items: flex-start;
+  }
+}

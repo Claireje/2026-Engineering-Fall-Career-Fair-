@@ -1,0 +1,208 @@
+/* student-guide.css */
+
+/* ── HERO ── */
+.sg-hero {
+  background-image: url('../img/student_guide.JPG') !important;
+  min-height: 440px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 80px 40px !important;
+}
+
+.sg-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  width: 100%;
+}
+
+.sg-hero-inner .hero-title {
+  font-size: clamp(48px, 7vw, 84px) !important;
+  margin-bottom: 0;
+}
+
+.sg-hero-inner .hero-sub {
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.65);
+  max-width: 520px;
+  margin: 0;
+}
+
+/* ── WHAT'S INSIDE ── */
+.sg-inside-section {
+  background: #FAF8F6;
+  color: #04192A;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.sg-inside-section .section-tag {
+  color: rgba(4, 25, 42, 0.45);
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.sg-inside-section .section-title {
+  color: #04192A;
+  font-size: clamp(28px, 3.5vw, 40px);
+  margin-bottom: 8px;
+}
+
+.sg-inside-section .section-sub {
+  font-size: 14px;
+  color: rgba(4, 25, 42, 0.5);
+  margin-bottom: 48px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sg-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.sg-card {
+  background: #fff;
+  border: 1px solid rgba(4, 25, 42, 0.07);
+  border-radius: 18px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sg-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(4, 25, 42, 0.07);
+}
+
+.sg-card-icon {
+  width: 40px;
+  height: 40px;
+  background: #FFC800;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sg-card-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: #04192A;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sg-card h3 {
+  font-family: 'Crimson Text', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #04192A;
+  margin: 0;
+}
+
+.sg-card p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(4, 25, 42, 0.55);
+  margin: 0;
+}
+
+/* ── DOWNLOAD CTA ── */
+.sg-cta-section {
+  background: #061929;
+  padding: 60px 40px;
+}
+
+.sg-cta-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.sg-cta-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 200, 0, 0.12);
+  border: 2px solid rgba(255, 200, 0, 0.25);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sg-cta-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: #FFC800;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sg-cta-text {
+  flex: 1;
+}
+
+.sg-cta-text h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(22px, 2.5vw, 30px);
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.sg-cta-text p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  .sg-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sg-cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sg-inside-section,
+  .sg-cta-section {
+    padding: 60px 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .sg-hero {
+    padding: 60px 20px !important;
+  }
+
+  .sg-cards {
+    grid-template-columns: 1fr;
+  }
+}

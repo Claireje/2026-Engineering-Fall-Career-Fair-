@@ -1,0 +1,417 @@
+/* volunteer.css
+   Page-specific styles for volunteer.html
+*/
+
+/* ── HERO ── */
+.vol-hero {
+  background-image: url('https://static.wixstatic.com/media/bab3e1_dc165574b2e34caa842cafd6a550c751~mv2.jpg/v1/fill/w_1920,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/bab3e1_dc165574b2e34caa842cafd6a550c751~mv2.jpg') !important;
+  background-size: cover !important;
+  background-position: center 40% !important;
+  min-height: 520px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 80px 40px !important;
+}
+
+.vol-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  width: 100%;
+}
+
+.vol-hero-inner .hero-title {
+  font-size: clamp(52px, 8vw, 96px) !important;
+  margin-bottom: 0;
+}
+
+.vol-hero-inner .hero-sub {
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.75);
+  max-width: 520px;
+  margin: 0;
+}
+
+/* ── WHY VOLUNTEER ── */
+.vol-why-section {
+  background: #FAF8F6;
+  color: #04192A;
+  padding: 80px 40px 0;
+}
+
+.vol-why-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  padding-bottom: 64px;
+}
+
+.vol-why-text .section-tag {
+  color: rgba(4, 25, 42, 0.45);
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.vol-why-text .section-title {
+  color: #04192A;
+  font-size: clamp(28px, 3.5vw, 40px);
+  margin-bottom: 20px;
+}
+
+.vol-why-text p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(4, 25, 42, 0.62);
+  margin-bottom: 16px;
+}
+
+.vol-note {
+  background: rgba(255, 200, 0, 0.12);
+  border-left: 3px solid #FFC800;
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px !important;
+  color: #04192A !important;
+}
+
+.vol-perks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.vol-perk-card {
+  background: #fff;
+  border: 1px solid rgba(4, 25, 42, 0.07);
+  border-radius: 16px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vol-perk-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(4, 25, 42, 0.07);
+}
+
+.vol-perk-icon {
+  width: 36px;
+  height: 36px;
+  background: #FFC800;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vol-perk-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: #04192A;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.vol-perk-title {
+  font-family: 'Crimson Text', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #04192A;
+  line-height: 1.2;
+}
+
+.vol-perk-desc {
+  font-size: 12px;
+  line-height: 1.65;
+  color: rgba(4, 25, 42, 0.5);
+}
+
+.vol-tshirt-banner {
+  background: #FFC800;
+  color: #04192A;
+  text-align: center;
+  padding: 16px 40px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ── SERVICE HOURS ── */
+.vol-hours-section {
+  background: #061929;
+  color: #fff;
+  padding: 80px 40px;
+}
+
+.vol-hours-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.vol-hours-text .section-tag {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.vol-hours-text .section-title {
+  color: #fff;
+  font-size: clamp(28px, 3vw, 38px);
+  margin-bottom: 20px;
+}
+
+.vol-hours-text p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #848C93;
+}
+
+.vol-orgs-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 16px;
+}
+
+.vol-orgs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vol-orgs-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #fff;
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+}
+
+.vol-orgs-list li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #FFC800;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── TIME SLOTS ── */
+.vol-slots-section {
+  background: #FAF8F6;
+  color: #04192A;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.vol-slots-section .section-tag {
+  color: rgba(4, 25, 42, 0.45);
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.vol-slots-section .section-title {
+  color: #04192A;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.vol-slots-section .section-sub {
+  font-size: 14px;
+  color: rgba(4, 25, 42, 0.5);
+  margin-bottom: 48px;
+}
+
+.vol-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.vol-slot-card {
+  background: #fff;
+  border: 1px solid rgba(4, 25, 42, 0.08);
+  border-radius: 20px;
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vol-slot-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(4, 25, 42, 0.08);
+}
+
+.vol-slot-card.featured {
+  background: #061929;
+  border-color: #061929;
+}
+
+.vol-slot-day {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(4, 25, 42, 0.4);
+}
+
+.vol-slot-card.featured .vol-slot-day {
+  color: rgba(255,255,255,0.4);
+}
+
+.vol-slot-time {
+  font-family: 'Crimson Text', serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #04192A;
+  line-height: 1.1;
+}
+
+.vol-slot-card.featured .vol-slot-time {
+  color: #FFC800;
+}
+
+.vol-slot-label {
+  font-size: 12px;
+  color: rgba(4, 25, 42, 0.45);
+  margin-top: 4px;
+}
+
+.vol-slot-card.featured .vol-slot-label {
+  color: rgba(255,255,255,0.4);
+}
+
+/* ── SIGN UP ── */
+.vol-signup-section {
+  position: relative;
+  background: #061929;
+  color: #fff;
+  padding: 100px 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.vol-signup-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://static.wixstatic.com/media/bab3e1_ccf600377a1544a6b22d0f45497e2b2b~mv2.png/v1/fill/w_1920,h_800,al_c,q_85,enc_avif,quality_auto/Screenshot%202025-06-28%20144952.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+}
+
+.vol-signup-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.vol-signup-inner .section-tag {
+  color: rgba(255,255,255,0.4);
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.vol-signup-inner .section-title {
+  color: #fff;
+  font-size: clamp(32px, 4vw, 48px);
+}
+
+.vol-signup-inner p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 8px;
+}
+
+.vol-email-link {
+  color: #FFC800;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 200, 0, 0.35);
+  transition: opacity 0.2s;
+}
+
+.vol-email-link:hover {
+  opacity: 0.75;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .vol-why-inner,
+  .vol-hours-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .vol-why-section {
+    padding: 60px 24px 0;
+  }
+
+  .vol-hours-section,
+  .vol-slots-section,
+  .vol-signup-section {
+    padding: 60px 24px;
+  }
+
+  .vol-slots-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .vol-hero {
+    padding: 60px 20px !important;
+  }
+
+  .vol-perks {
+    grid-template-columns: 1fr;
+  }
+
+  .vol-tshirt-banner {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}

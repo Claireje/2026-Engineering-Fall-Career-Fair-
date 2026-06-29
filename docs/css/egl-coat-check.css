@@ -1,0 +1,428 @@
+/* egl-coat-check.css
+   Page-specific styles for egl-coat-check.html
+   Shared base styles live in homestyle.css.
+*/
+
+/* ── HERO ── */
+.coat-hero {
+  background-image: url('../img/homepage_image.png') !important;
+  background-size: cover !important;
+  background-position: center top !important;
+  min-height: 480px !important;
+  padding: 80px 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.coat-hero .hero-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  grid-template-columns: unset !important;
+  max-width: 700px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.coat-hero .hero-title {
+  font-size: clamp(44px, 6vw, 72px) !important;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.coat-hero .hero-sub {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 580px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.coat-hero .hero-pills {
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.coat-hero .hero-btns {
+  justify-content: center;
+}
+
+/* ── SHARED ── */
+.btn-ghost-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 30px;
+  padding: 11px 26px;
+  font-size: 14px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  text-decoration: none;
+}
+
+.btn-ghost-light:hover {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.section-sub {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(4, 25, 42, 0.58);
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+/* ── INFO + FLOORPLAN ── */
+.coat-info-section {
+  background: #FAF8F6;
+  color: #04192A;
+}
+
+.coat-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+
+.coat-info-text {
+  padding: 72px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coat-info-text .section-tag {
+  color: rgba(4, 25, 42, 0.5);
+  letter-spacing: 0.13em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.coat-info-text .section-title {
+  color: #04192A;
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 20px;
+}
+
+.coat-info-text p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(4, 25, 42, 0.65);
+  margin-bottom: 20px;
+}
+
+.egl-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #04192A;
+  border-bottom: 2px solid #FFC800;
+  text-decoration: none;
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.egl-link:hover {
+  opacity: 0.7;
+}
+
+/* ── INFO CARDS ── */
+.coat-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.coat-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid rgba(4, 25, 42, 0.08);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.coat-info-card-icon {
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 200, 0, 0.12);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.coat-info-card-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #a07800;
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.coat-info-card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #04192A;
+  margin-bottom: 3px;
+  letter-spacing: 0.02em;
+}
+
+.coat-info-card-desc {
+  font-size: 13px;
+  color: rgba(4, 25, 42, 0.6);
+  line-height: 1.6;
+}
+
+/* ── FLOORPLAN ── */
+.coat-floorplan {
+  position: relative;
+  background: #fff;
+  border-left: 1px solid rgba(4, 25, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 16px;
+}
+
+.coat-floorplan img {
+  max-width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid rgba(4, 25, 42, 0.08);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+
+.coat-floorplan-caption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(4, 25, 42, 0.5);
+}
+
+.coat-floorplan-caption::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #FFC800;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* ── LOST & FOUND SECTION ── */
+.coat-policy-section {
+  background: #061929;
+  color: #fff;
+  padding: 80px 40px;
+}
+
+.coat-policy-section .section-tag {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.coat-policy-section .section-title {
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.policy-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  padding: 36px;
+  transition: border-color 0.25s;
+}
+
+.policy-card:hover {
+  border-color: rgba(255, 200, 0, 0.25);
+}
+
+.policy-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #FFC800;
+}
+
+.policy-card-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 200, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.policy-card-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #FFC800;
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.policy-card h3 {
+  font-family: 'Crimson Text', serif;
+  font-size: 22px;
+  color: #fff;
+}
+
+.policy-card p {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #848C93;
+}
+
+/* ── CONTACT SECTION ── */
+.coat-contact-section {
+  background: #FAF8F6;
+  padding: 72px 40px;
+  text-align: center;
+}
+
+.coat-contact-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid rgba(4, 25, 42, 0.08);
+  border-radius: 24px;
+  padding: 48px 40px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+
+.coat-contact-card .section-tag {
+  color: rgba(4, 25, 42, 0.5);
+  letter-spacing: 0.13em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.coat-contact-card h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: 36px;
+  color: #04192A;
+  margin-bottom: 14px;
+}
+
+.coat-contact-card p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(4, 25, 42, 0.6);
+  margin-bottom: 28px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.contact-link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #04192A;
+  text-decoration: none;
+  padding: 12px 24px;
+  background: rgba(4, 25, 42, 0.05);
+  border: 1px solid rgba(4, 25, 42, 0.1);
+  border-radius: 30px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.contact-link-item:hover {
+  background: #FFC800;
+  border-color: #FFC800;
+}
+
+.contact-link-item svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .coat-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coat-info-text {
+    padding: 48px 24px;
+  }
+
+  .coat-floorplan {
+    border-left: none;
+    border-top: 1px solid rgba(4, 25, 42, 0.08);
+    padding: 32px 20px;
+  }
+
+  .policy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coat-policy-section {
+    padding: 60px 20px;
+  }
+
+  .coat-contact-section {
+    padding: 60px 20px;
+  }
+
+  .coat-contact-card {
+    padding: 36px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .coat-hero {
+    padding: 60px 20px !important;
+  }
+}
