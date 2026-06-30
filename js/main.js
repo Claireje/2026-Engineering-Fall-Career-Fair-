@@ -210,6 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector('.nav');
     if (!hamburger || !nav) return;
 
+
     hamburger.addEventListener('click', () => {
       const isOpen = nav.classList.toggle('is-open');
       hamburger.setAttribute('aria-expanded', isOpen);
