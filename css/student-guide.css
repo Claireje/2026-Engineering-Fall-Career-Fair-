@@ -102,6 +102,12 @@
   flex-shrink: 0;
 }
 
+.sg-card-img-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
 .sg-card-icon svg {
   width: 18px;
   height: 18px;
