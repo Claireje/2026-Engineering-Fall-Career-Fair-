@@ -212,3 +212,19 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ── UPDATE NOTICE ── */
+.sg-update-notice {
+  background: #FFF4D6;
+  border: 1px solid rgba(212, 165, 21, 0.45);
+  border-left: 4px solid #F0B41C;
+  color: #04192A;
+  font-family: 'Crimson Text', serif;
+  font-size: 17px;
+  line-height: 1.7;
+  padding: 12px 18px;
+  margin: 0 auto 32px;
+  max-width: 860px;
+  border-radius: 10px;
+  text-align: left;
+}
