@@ -371,6 +371,7 @@
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 200, 0, 0.35);
   transition: opacity 0.2s;
+  white-space: nowrap;
 }
 
 .vol-email-link:hover {
