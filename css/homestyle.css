@@ -224,6 +224,31 @@ img {
     cursor: pointer; 
 }
 
+.btn-yellow-timeline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #FFC800;
+  color: #04192A;
+  border: none;
+  border-radius: 30px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(4, 25, 42, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-yellow-timeline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(4, 25, 42, 0.16);
+}
+
 /* ── SEARCH BAR ── */
 .search-container {
     display: flex;
@@ -1027,12 +1052,66 @@ footer {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-columns: 340px 1fr 1fr 1fr;
     gap: 28px;
     margin-bottom: 28px;
 }
 
-.footer-brand-logo {
+.footer-logo-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-main-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.footer-main-logo img {
+    width: 150px;
+    height: auto;
+}
+
+.footer-partner-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}
+
+.footer-partner-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-partner-logo img {
+    width: 105px;
+    height: auto;
+    max-height: 48px;
+    object-fit: contain;
+}
+
+.footer-partner-logo:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+    .footer-logo-group {
+        gap: 16px;
+    }
+
+    .footer-main-logo img {
+        width: 125px;
+    }
+
+    .footer-partner-logo img {
+        width: 88px;
+    }
+}
+
+/* .footer-brand-logo {
     width: 54px;
     height: 54px;
     background: #FFC800;
@@ -1084,7 +1163,7 @@ footer {
 
 .footer-contact a:hover {
     color: #FFC800;
-}
+} */
 
 .footer-col-head {
     font-family: 'Crimson Text', serif;
