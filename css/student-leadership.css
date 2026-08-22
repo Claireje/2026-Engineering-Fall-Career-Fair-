@@ -1,0 +1,398 @@
+/* ─────────────────────────────────────────────
+   STUDENT LEADERSHIP PAGE
+   ───────────────────────────────────────────── */
+
+
+/* ── PAGE ── */
+
+.leadership-page {
+  background: #ffffff;
+}
+
+
+
+/* ─────────────────────────────────────────────
+   HERO
+   ───────────────────────────────────────────── */
+
+.leadership-hero {
+  background: #061929;
+  color: #ffffff;
+  padding: 90px 32px 85px;
+}
+
+
+.leadership-hero-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+.leadership-eyebrow {
+  margin: 0 0 14px;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #ffcb05;
+}
+
+
+.leadership-title {
+  margin: 10px 0 22px;
+
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-weight: 700;
+
+  line-height: 0.95;
+
+  color: #ffffff;
+}
+
+
+.leadership-intro {
+  max-width: 650px;
+  margin: 0;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+/* ─────────────────────────────────────────────
+   LEADERSHIP SECTIONS
+   ───────────────────────────────────────────── */
+
+.leadership-section {
+  padding: 75px 6%;
+  text-align: center;
+
+  background: #ffffff;
+}
+
+
+/* Keep all sections the same background */
+.leadership-section-alt {
+  background: #ffffff;
+}
+
+
+.leadership-section h2 {
+  margin: 0 0 45px;
+
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 700;
+
+  line-height: 1;
+
+  color: #061929;
+}
+
+
+
+/* ─────────────────────────────────────────────
+   LEADERSHIP GRID
+   ───────────────────────────────────────────── */
+
+.leadership-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  /*
+    First value = vertical space between rows
+    Second value = horizontal space between people
+  */
+  gap: 30px 45px;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+.leadership-grid-small-names .leader h3.leader-name {
+  font-size: 1.55rem;
+}
+
+.leader-name-wrap {
+  white-space: normal !important;
+  max-width: 180px;
+  text-align: center;
+}
+
+
+
+/* ─────────────────────────────────────────────
+   NORMAL COMMITTEE MEMBER
+   ───────────────────────────────────────────── */
+
+.leader {
+  width: 230px;
+  flex: 0 0 230px;
+
+  text-align: center;
+}
+
+
+.leader-photo {
+  display: block;
+
+  width: 230px;
+  height: 230px;
+
+  box-sizing: border-box;
+
+  margin: 0 auto;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 50%;
+  border: 5px solid #ffcb05;
+
+  box-shadow:
+    0 8px 24px rgba(6, 25, 41, 0.12);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* .leader:hover .leader-photo {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 14px 30px rgba(6, 25, 41, 0.18);
+} */
+
+
+
+/* ─────────────────────────────────────────────
+   DIRECTORS
+   Larger than normal committee members
+   ───────────────────────────────────────────── */
+
+.directors-section .leader {
+  width: 280px;
+  flex-basis: 280px;
+}
+
+
+.directors-section .leader-photo {
+  width: 280px;
+  height: 280px;
+}
+
+
+
+/* ─────────────────────────────────────────────
+   COMPACT GRID
+   Use for sections with 5+ people
+
+   HTML:
+   <div class="leadership-grid leadership-grid-compact">
+   ───────────────────────────────────────────── */
+
+.leadership-grid-compact {
+  gap: 30px 30px;
+}
+
+
+.leadership-grid-compact .leader {
+  width: 190px;
+  flex-basis: 190px;
+}
+
+
+.leadership-grid-compact .leader-photo {
+  width: 190px;
+  height: 190px;
+}
+
+
+
+/* ─────────────────────────────────────────────
+   NAME + LINKEDIN
+   ───────────────────────────────────────────── */
+
+.leader-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: max-content;
+  max-width: none;
+
+  margin: 18px auto 0;
+}
+
+.leader h3.leader-name {
+  margin: 0;
+
+  font-family: 'Crimson Text', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.05;
+
+  color: #061929;
+
+  white-space: nowrap;
+}
+
+.leader-linkedin {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+}
+
+.linkedin-icon {
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  display: block !important;
+}
+
+
+.leader-linkedin:hover .linkedin-icon {
+  opacity: 0.75;
+  transform: translateY(-1px);
+}
+
+
+
+/* ─────────────────────────────────────────────
+   SWE / TBP AFFILIATION
+   ───────────────────────────────────────────── */
+
+.leader-affiliation {
+  margin: 6px 0 0;
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #596773;
+
+  letter-spacing: 0.05em;
+}
+
+
+
+/* ─────────────────────────────────────────────
+   TABLET
+   ───────────────────────────────────────────── */
+
+@media (max-width: 1000px) {
+
+  .leadership-section {
+    padding: 65px 5%;
+  }
+
+
+  .leadership-grid {
+    gap: 35px 35px;
+  }
+
+
+  .directors-section .leader {
+    width: 250px;
+    flex-basis: 250px;
+  }
+
+
+  .directors-section .leader-photo {
+    width: 250px;
+    height: 250px;
+  }
+
+}
+
+
+
+/* ─────────────────────────────────────────────
+   MOBILE
+   ───────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+
+  .leadership-hero {
+    padding: 65px 24px 60px;
+  }
+
+
+  .leadership-section {
+    padding: 60px 24px;
+  }
+
+
+  .leadership-section h2 {
+    margin-bottom: 40px;
+  }
+
+
+  .leadership-grid,
+  .leadership-grid-compact {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 35px;
+  }
+
+
+  /* Normal member */
+
+  .leader,
+  .leadership-grid-compact .leader {
+    width: 220px;
+    flex-basis: auto;
+  }
+
+
+  .leader-photo,
+  .leadership-grid-compact .leader-photo {
+    width: 220px;
+    height: 220px;
+  }
+
+
+  /* Directors remain slightly larger */
+
+  .directors-section .leader {
+    width: 250px;
+    flex-basis: auto;
+  }
+
+
+  .directors-section .leader-photo {
+    width: 250px;
+    height: 250px;
+  }
+
+
+  .leader h3.leader-name {
+    font-size: 1.8rem;
+  }
+
+}

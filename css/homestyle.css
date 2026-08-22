@@ -82,6 +82,16 @@ img {
 .nav-dropdown {
   position: relative;
 }
+
+.nav-dropdown-right .nav-dropdown-menu {
+  left: 50%;
+  transform: translateX(calc(-50% - 60px));
+}
+
+.nav-dropdown-right .nav-dropdown-menu::before {
+  left: calc(50% + 60px);
+}
+
 .nav-links {
   display: flex;
   align-items: center;
