@@ -217,16 +217,37 @@ document.addEventListener("DOMContentLoaded", () => {
       hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
       // Reset all sub-menus when closing the hamburger
       if (!isOpen) {
-        nav.querySelectorAll('.nav-dropdown.is-open').forEach(d => d.classList.remove('is-open'));
+        nav.querySelectorAll('.nav-dropdown.is-open').forEach(d => {
+          d.classList.remove('is-open');
+          d.querySelector('.nav-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+        });
       }
     });
 
-    // Tap on Students/Employers toggles their sub-menu on mobile
-    nav.querySelectorAll('.nav-dropdown-trigger').forEach(trigger => {
+    // Tap on Students/Employers toggles their sub-menu on mobile;
+    // hover/keyboard focus reveals it on desktop (see .nav-dropdown:hover /
+    // :focus-within in homestyle.css). Keep aria-expanded in sync either way
+    // so screen readers know these triggers open a submenu.
+    nav.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+      const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+      if (!trigger) return;
+
       trigger.addEventListener('click', (e) => {
         if (window.innerWidth <= 768) {
           e.preventDefault();
-          trigger.closest('.nav-dropdown').classList.toggle('is-open');
+          const isOpen = dropdown.classList.toggle('is-open');
+          trigger.setAttribute('aria-expanded', isOpen);
+        }
+      });
+
+      dropdown.addEventListener('mouseenter', () => trigger.setAttribute('aria-expanded', 'true'));
+      dropdown.addEventListener('mouseleave', () => {
+        if (!dropdown.classList.contains('is-open')) trigger.setAttribute('aria-expanded', 'false');
+      });
+      dropdown.addEventListener('focusin', () => trigger.setAttribute('aria-expanded', 'true'));
+      dropdown.addEventListener('focusout', (e) => {
+        if (!dropdown.contains(e.relatedTarget) && !dropdown.classList.contains('is-open')) {
+          trigger.setAttribute('aria-expanded', 'false');
         }
       });
     });
@@ -237,6 +258,10 @@ document.addEventListener("DOMContentLoaded", () => {
         nav.classList.remove('is-open');
         hamburger.setAttribute('aria-expanded', 'false');
         hamburger.setAttribute('aria-label', 'Open navigation menu');
+        nav.querySelectorAll('.nav-dropdown.is-open').forEach(d => {
+          d.classList.remove('is-open');
+          d.querySelector('.nav-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+        });
       }
     });
 
@@ -245,6 +270,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!nav.contains(e.target)) {
         nav.classList.remove('is-open');
         hamburger.setAttribute('aria-expanded', 'false');
+        nav.querySelectorAll('.nav-dropdown.is-open').forEach(d => {
+          d.classList.remove('is-open');
+          d.querySelector('.nav-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+        });
       }
     });
 
