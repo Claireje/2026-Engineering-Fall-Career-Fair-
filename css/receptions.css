@@ -49,9 +49,30 @@
   text-align: center;
 }
 
+.rsvp-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 360px;
+}
+
+.hero-rsvp-note {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #FFC800;
+  text-align: center;
+  background: rgba(6, 25, 41, 0.85);
+  border: 1px solid rgba(255, 200, 0, 0.35);
+  border-radius: 14px;
+  padding: 10px 20px;
+  margin: 0;
+}
+
 .hero-btns {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   gap: 12px;
   flex-wrap: wrap;
 }
@@ -195,10 +216,24 @@
   border: 1px solid rgba(255, 200, 0, 0.2);
   border-radius: 20px;
   padding: 18px 22px;
-  font-size: 13px;
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
   color: #FAF8F6;
-  line-height: 1.75;
+  line-height: 1.55;
   margin-bottom: 28px;
+}
+
+.rsvp-note-item + .rsvp-note-item {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 200, 0, 0.15);
+}
+
+.rsvp-note-label {
+  color: #FFC800;
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 3px;
 }
 
 .rsvp-note strong {
@@ -483,6 +518,13 @@
   font-size: 13px;
   color: rgba(4, 25, 42, 0.55);
   line-height: 1.75;
+}
+
+.guideline-desc a {
+  color: #04192A;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(4, 25, 42, 0.35);
 }
 
 /* ── PRICING CARD ── */
