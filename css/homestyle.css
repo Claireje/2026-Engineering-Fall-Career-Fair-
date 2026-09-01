@@ -26,17 +26,7 @@ body {
     margin-top: auto;
 }
 
-/* Elfsight injects its chat widget as extra elements appended to <body>.
-   Force them out of normal document flow so they can't add page height
-   below the footer; leave their own top/right/bottom/left/size rules
-   (set inline by the widget script) alone so the bubble still lands
-   in its normal spot. */
-[class*="elfsight-app-"],
-[id*="EAAPS_PORTAL"] {
-    position: fixed !important;
-}
-
-a { 
+a {
     text-decoration: none; 
     color: inherit; 
 }
