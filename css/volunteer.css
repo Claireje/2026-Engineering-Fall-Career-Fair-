@@ -53,7 +53,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: start;
-  padding-bottom: 64px;
+  padding-bottom: 32px;
 }
 
 .vol-why-text .section-tag {
@@ -142,87 +142,188 @@
   color: rgba(4, 25, 42, 0.5);
 }
 
+.vol-wordcloud {
+  background: #fff;
+  border: 1px solid rgba(4, 25, 42, 0.07);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.vol-event-location .vol-wordcloud {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(4, 25, 42, 0.08);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.vol-wordcloud img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
 .vol-tshirt-banner {
   background: #FFC800;
   color: #04192A;
-  text-align: center;
-  padding: 16px 40px;
-  font-size: 15px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
 
-/* ── SERVICE HOURS ── */
-.vol-hours-section {
-  background: #061929;
-  color: #fff;
-  padding: 80px 40px;
+/* ── PHOTOS ── */
+.vol-photos-section {
+  background: #FAF8F6;
+  padding: 32px 40px 80px;
+  text-align: center;
 }
 
-.vol-hours-inner {
-  max-width: 1000px;
+.vol-photos-grid {
+  max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
+  gap: 20px;
 }
 
-.vol-hours-text .section-tag {
-  color: rgba(255, 255, 255, 0.4);
+.vol-photos-grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.vol-photos-caption {
+  margin-top: 16px;
+  font-size: 13px;
+  color: rgba(4, 25, 42, 0.5);
+}
+
+/* ── EVENT SCHEDULE & LOCATION ── */
+.vol-event-section {
+  background: #FAF8F6;
+  color: #04192A;
+  padding: 80px 40px;
+}
+
+.vol-event-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.vol-event-col .section-tag {
+  color: rgba(4, 25, 42, 0.45);
   font-weight: 700;
   letter-spacing: 0.13em;
   display: block;
   margin-bottom: 10px;
 }
 
-.vol-hours-text .section-title {
-  color: #fff;
+.vol-event-col .section-title {
+  color: #04192A;
   font-size: clamp(28px, 3vw, 38px);
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 }
 
-.vol-hours-text p {
-  font-size: 14px;
-  line-height: 1.9;
-  color: #848C93;
+.vol-event-group + .vol-event-group {
+  margin-top: 24px;
 }
 
-.vol-orgs-label {
+.vol-event-group-label {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 16px;
+  color: rgba(4, 25, 42, 0.4);
+  margin-bottom: 12px;
 }
 
-.vol-orgs-list {
+.vol-event-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
-.vol-orgs-list li {
+.vol-event-list li {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 15px;
-  color: #fff;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 14px;
+  background: rgba(255, 200, 0, 0.1);
+  border-left: 3px solid #FFC800;
+  border-radius: 0 8px 8px 0;
   font-family: 'Crimson Text', serif;
+  font-size: 16px;
   font-weight: 600;
+  color: #04192A;
 }
 
-.vol-orgs-list li::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: #FFC800;
-  border-radius: 50%;
+.vol-event-list li span:last-child {
+  color: rgba(4, 25, 42, 0.55);
+  font-weight: 400;
+}
+
+.vol-event-location {
+  background: #fff;
+  border: 1px solid rgba(4, 25, 42, 0.08);
+  border-radius: 20px;
+  padding: 28px 24px;
+}
+
+.vol-event-location .vol-event-group-label {
+  margin-bottom: 20px;
+}
+
+.vol-location-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.vol-location-item + .vol-location-item {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(4, 25, 42, 0.08);
+}
+
+.vol-location-item svg {
   flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  fill: none;
+  stroke: #FFC800;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.vol-location-name {
+  font-family: 'Crimson Text', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #04192A;
+}
+
+.vol-location-desc {
+  font-size: 12px;
+  color: rgba(4, 25, 42, 0.5);
+  margin-top: 2px;
 }
 
 /* ── TIME SLOTS ── */
@@ -318,54 +419,7 @@
   color: rgba(255,255,255,0.4);
 }
 
-/* ── SIGN UP ── */
-.vol-signup-section {
-  position: relative;
-  background: #061929;
-  color: #fff;
-  padding: 100px 40px;
-  text-align: center;
-  overflow: hidden;
-}
-
-.vol-signup-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url('https://static.wixstatic.com/media/bab3e1_ccf600377a1544a6b22d0f45497e2b2b~mv2.png/v1/fill/w_1920,h_800,al_c,q_85,enc_avif,quality_auto/Screenshot%202025-06-28%20144952.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.08;
-}
-
-.vol-signup-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.vol-signup-inner .section-tag {
-  color: rgba(255,255,255,0.4);
-  font-weight: 700;
-  letter-spacing: 0.13em;
-}
-
-.vol-signup-inner .section-title {
-  color: #fff;
-  font-size: clamp(32px, 4vw, 48px);
-}
-
-.vol-signup-inner p {
-  font-size: 14px;
-  line-height: 1.85;
-  color: rgba(255,255,255,0.6);
-  margin-bottom: 8px;
-}
-
+/* ── EMAIL LINK (used in hero) ── */
 .vol-email-link {
   color: #FFC800;
   text-decoration: none;
@@ -381,7 +435,7 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .vol-why-inner,
-  .vol-hours-inner {
+  .vol-event-inner {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -390,10 +444,17 @@
     padding: 60px 24px 0;
   }
 
-  .vol-hours-section,
   .vol-slots-section,
-  .vol-signup-section {
+  .vol-event-section {
     padding: 60px 24px;
+  }
+
+  .vol-photos-section {
+    padding: 48px 24px 60px;
+  }
+
+  .vol-photos-grid {
+    grid-template-columns: 1fr;
   }
 
   .vol-slots-grid {
@@ -414,5 +475,9 @@
   .vol-tshirt-banner {
     padding: 14px 20px;
     font-size: 14px;
+  }
+
+  .vol-photos-grid img {
+    height: 220px;
   }
 }
