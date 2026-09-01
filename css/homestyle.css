@@ -10,10 +10,30 @@ html {
     font-size: 16px; 
 }
 
-body { 
-    font-family: 'IBM Plex Mono', monospace; 
-    background: #061929; 
-    color: #fff; 
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background: #061929;
+    color: #fff;
+}
+
+.page-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-shell #footer-container {
+    margin-top: auto;
+}
+
+/* Elfsight injects its chat widget as extra elements appended to <body>.
+   Force them out of normal document flow so they can't add page height
+   below the footer; leave their own top/right/bottom/left/size rules
+   (set inline by the widget script) alone so the bubble still lands
+   in its normal spot. */
+[class*="elfsight-app-"],
+[id*="EAAPS_PORTAL"] {
+    position: fixed !important;
 }
 
 a { 
