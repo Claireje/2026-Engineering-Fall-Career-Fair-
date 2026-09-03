@@ -110,6 +110,11 @@ text-align: center;
   justify-content: center;
 }
 
+.faq-category-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
 .faq-category h3 {
   font-family: 'Crimson Text', serif;
   font-size: 26px;
