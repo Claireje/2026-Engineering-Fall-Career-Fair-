@@ -280,14 +280,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // ── NAV SEARCH ──
     const SEARCH_INDEX = [
       { title: 'Student Guide', url: 'student-guide.html', desc: 'Prepare for the fair — resume tips, attire, and more' },
-      { title: 'Career Fair Plus App', url: 'career-fair-plus.html', desc: 'Navigate the fair with the official mobile app' },
       { title: 'Volunteer', url: 'volunteer.html', desc: 'Volunteer opportunities at the fair' },
       { title: 'Employer FAQ', url: 'employer-faq.html', desc: 'FAQs for employers — booths, registration, logistics' },
       { title: 'Receptions', url: 'receptions.html', desc: 'Pre-fair networking receptions Sep 12–13' },
-      { title: 'Maps', url: 'maps_fall engineering career fair.html', desc: 'Venue floor plans, campus map, and parking info' },
       { title: 'About Us', url: 'about-us.html', desc: 'About SWE, Tau Beta Pi, and the fair history' },
       { title: 'Event Timeline', url: 'index.html#timeline', desc: 'Key dates — registration, receptions, fair days' },
-      { title: 'Getting There', url: 'maps_fall engineering career fair.html#getting-there', desc: 'Bus, parking, walking, and rideshare directions' },
       { title: 'Home', url: 'index.html', desc: 'Fall Engineering Career Fair — Sep 14–15, 2026' },
     ];
 
