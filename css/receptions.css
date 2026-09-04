@@ -164,7 +164,7 @@
 
 .location-map-pin {
   position: absolute;
-  top: 50%;
+  top: 44%;
   left: 50%;
   transform: translate(-50%, -100%);
   background: #FFC800;
